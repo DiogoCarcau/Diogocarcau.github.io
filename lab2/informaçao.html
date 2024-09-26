@@ -1,27 +1,84 @@
-<section id="informacao" class="informacao"></section>
-<style>
-    /* Define uma cor de fundo para a página */
-    body {
-        background-color: #808080; /* Cor de fundo */
-    }
-</style>
-
-    <h1>Informação sobre Atenas</h1>
-
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabela 3x4 com campos de entrada</title>
+    <style>
+        body {
+            background-color: #808080; /* Cor de fundo */
+        }
+        table {
+            width: 50%;
+            border-collapse: collapse;
+        }
+        table, th, td {
+            border: 1px solid black;
+            text-align: center;
+            padding: 8px;
+        }
+        a {
+            text-decoration: none;
+            color: blue;
+        }
+    </style>
+</head>
+<body>
     <header>
-        <h2>Cultura e tradiçao </h2>
+        <h1>Atenas</h1>
     </header>
-    <p>A cultura e as tradições do povo de Atenas, tanto na Antiguidade quanto nos dias atuais, são profundamente marcadas por seu legado histórico e influência no desenvolvimento da civilização ocidental. </p> 
+    <footer>
+        <img src="images/atenas-719305414.jpg" alt="Imagem de Atenas" width="370">
+        <nav>
+            <a href="Home.html">Home</a>
+            <a href="local.html">Localização</a>
+            <a href="multimedia.html">Multimedia</a>
+            <a href="informacao.html">Informação</a>   
+        </nav>
+    </footer>
 
-     <!-- Insere a imagem diretamente no conteúdo -->
-     <img src="images/atenas-719305414.jpg" alt="Imagem de Atenas" width="370">
+    <section id="informacao" class="informacao">
+        <h2>Informação</h2>
+        <table>
+            <tr>
+                <td rowspan="2">Demografia</td>
+                <td>População</td>
+                <td>664,046 hab</td>
+            </tr>
+            <tr>
+                <td>Densidade populacional</td>
+                <td>7 501 hab/km²</td>
+            </tr>
+            <tr>
+                <td rowspan="3">Geografia</td>
+                <td>Área</td>
+                <td>3.800 km²</td>
+            </tr>
+            <tr>
+                <td>Região</td>
+                <td>Atenas</td>
+            </tr>
+            <tr>
+                <td>País</td>
+                <td>Grécia</td>
+            </tr>
+            <tr>
+                <td colspan="2">Website</td>
+                <td><a href="https://worldpopulationreview.com/countries">www.worldpopulationview.com</a></td>
+            </tr>
+        </table>
 
-     <header>
-        <h1>Comida e gastronomia </h1>
-    </header>
-    <p>Não deixe de experimentar as delícias da cozinha grega enquanto estiver em Atenas. Pratos tradicionais como moussaka, souvlaki,
-         e as famosas saladas gregas com azeite local irão proporcionar uma experiência gastronômica inesquecível.</p> 
+        <h2>Curiosidades sobre Atenas</h2>
+        <ul>
+            <li>O mati, o famoso olho azul conhecido por afastar o mau olhado, vem de uma crença da população de Atenas.</li>
+            <li>As ruas de Atenas eram tão estreitas que, no passado, costumavam gritar “Cuidado!” ao se aproximar de uma esquina, para evitar colisões!</li>
+            <li>A cidade subterrânea: Atenas possui uma vasta rede de catacumbas e túneis subterrâneos que datam da antiguidade.</li>
+            <li>O Teatro de Dionísio, localizado na encosta da Acrópole, é considerado o primeiro teatro do mundo.</li>
+            <li>Apesar de muitas pessoas associarem o Carnaval com cidades como Veneza ou Rio de Janeiro, Atenas também tem suas próprias celebrações carnavalescas: o "Apokries".</li>
+        </ul>
 
-    
-   
-</section>
+        <p>DIOGO,Universidade Lusofona, 2024</p>
+    </section>
+
+</body>
+</html>
