@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pt">
+    <head>
+        <meta charset="UTF-8">
+        <title>Atenas</title>
+        <style>
+            /* Define uma cor de fundo para a página */
+            body {
+                background-color: #808080; /* Cor de fundo */
+            }
+            /* Estilo do campo de informações gerais */
+            fieldset {
+                background-color: #6E787B; /* cor cinza escuro background*/
+                padding: 20px;
+                border: 2px solid rgb(16, 16, 16);
+                width: 400px;
+                margin-top: 20px; /* Adiciona espaço em cima */
+            }
+
+            /* Estilo da legenda (título do fieldset) */
+            legend {
+                font-weight: bold;
+                color: #161515;
+                padding: 5px 10px;
+                background-color: #4F5A5D; /* cor mais escura */
+                border: 1px solid black;
+            }
+
+            /* Estilo dos labels */
+            label {
+                margin: 10px 0 5px;
+                color: #000000;
+            }
+
+        </style>
+        
+        
+        <!--inicio foto principal e link-->
+        <header>
+            <h1>Atenas</h1>
+        </header>
+        <footer>
+            <img src="images/atenas-719305414.jpg" alt="Imagem de Atenas" width="370"  >
+            <nav></nav>
+                <a href="Home.html">Home</a>
+                <a href="local.html">Localização</a>
+                <a href="multimedia.html">Multimedia</a>
+                <a href="informaçao.html">Informação</a>   
+            </nav>
+        </footer>
+
+    <h2>Quizz</h2> 
+
+    <form>
+        <fieldset>
+            <legend>Informações Gerais</legend>
+
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome"><br>
+
+            <label for="apelido">Apelido:</label>
+            <input type="text" id="apelido" name="apelido"><br>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email">
+        </fieldset>
+    </form>
+
+    <form> 
+        <fieldset>
+            <!--text feita-->
+            <label for="visita">Quantas vezes foste a Atenas?</label>
+            <input type="text" id="visita" name="Visita" >
+
+            <!--radio feita-->
+            <p>Qual é o seu ponto turístico favorito em Atenas?</p>
+            <input type="radio" id="acropole" name="ponto_turistico" value="acropole" >
+            <label for="acropole">Acrópole</label><br>
+            <input type="radio" id="Museu_Arqueológico_Nacional" name="ponto_turistico" value="Museu_Arqueológico_Nacional">
+            <label for="Museu_Arqueológico_Nacional">Museu Arqueológico Nacional</label><br>
+            <input type="radio" id="Praça_Syntagma" name="ponto_turistico" value="Praça_Syntagma" >
+            <label for="Praça_Syntagma">Praça Syntagma</label><br>
+            <input type="radio" id="Bairro_de_Plaka" name="ponto_turistico" value="Bairro_de_Plaka">
+            <label for="Bairro_de_Plaka">Bairro de Plaka</label><br>
+
+        <!--Checkbox feita-->
+    <p>Quais destas atividades você gostaria de fazer em Atenas? (Selecione todas que se aplicam)</p>
+    <input type="checkbox" id="visitar_acropole" name="atividades" value="Visitar a Acrópole">
+    <label for="visitar_acropole">Visitar a Acrópole</label><br>
+    <input type="checkbox" id="culinaria" name="atividades" value="Experimentar a culinária local">
+    <label for="culinaria">Experimentar a culinária local</label><br>
+    <input type="checkbox" id="compras" name="atividades" value="Fazer compras em Ermou Street">
+    <label for="compras">Fazer compras em Ermou Street</label><br>
+    <input type="checkbox" id="mercado" name="atividades" value="Explorar o Mercado Central">
+    <label for="mercado">Explorar o Mercado Central</label><br><br>
+
+    <!--date feita-->
+    <label for="data_visita">Em que data pretende visitar Atenas?</label>
+    <input type="date" id="data_visita" name="data_visita"><br><br>
+
+     <!-- Pergunta Color -->
+     <label for="cor">Qual cor você associa mais a Atenas?</label><br>
+     <input type="color" id="cor" name="cor"><br><br>
+ 
+     <!-- Pergunta Number -->
+     <label for="dias">Quantos dias você pretende passar em Atenas?</label><br>
+     <input type="number" id="dias" name="dias"><br><br>
+ 
+     <!-- Pergunta Range -->
+     <label for="interesse">Qual é o seu nível de interesse em história? (0 a 10)</label><br>
+     <input type="range" id="interesse" name="interesse" min="0" max="10"><br><br>
+ 
+     <!-- Pergunta Image -->
+     <p>Qual dessas imagens representa melhor sua visão de Atenas?</p>
+     <img src="images/caption (1).jpg" alt="Acrópole" width="100">
+     <input type="radio" id="acropole" name="imagem" value="acropole">
+     <label for="acropole">Acrópole</label><br>
+     <img src="images/use-this (1).jpg" alt="Peças_De_teatro" width="100">
+     <input type="radio" id="imagem2" name="Peças_De_teatro" value="Peças_De_teatro">
+     <label for="imagem2">Peças De teatro</label><br>
+     <img src="images/plaza-sintagma.avif" alt="Praça Syntagma" width="100">
+     <input type="radio" id="imagem3" name="imagem" value="imagem3">
+     <label for="imagem3">Praça Syntagma</label><br><br>
+ 
+     <!-- Pergunta Reset -->
+     <button type="reset">Reiniciar respostas</button>
+ 
+
+        </fieldset>
+    </form>
+
+
+
+</html>
