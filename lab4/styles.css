@@ -1,14 +1,15 @@
 /* Estilo geral do body */
 body {
-    background-color: #79bad6; /* Fundo azul claro */
+    background-color: #222222; /* Fundo cinzento */
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    color: #ffffff; /* Texto em branco */
 }
 
 /* Estilo para o container do título */
 .title-container {
-    background-color: #79bad6; /* Fundo azul escuro para o título */
+    background-color: #79bad6; /* Fundo azul claro para o título */
     padding: 20px;
     text-align: center;
 }
@@ -21,7 +22,7 @@ h1 {
 
 /* Estilo para o container da navegação */
 .nav-container {
-    background-color: #4a3e3e; /* Cor de fundo da barra de navegação */
+    background-color: #79bad6; /* Cor de fundo da barra de navegação */
     padding: 10px;
 }
 
@@ -41,7 +42,7 @@ nav a {
 
 nav a:hover {
     background-color: #F4A460; /* Cor areia no hover */
-    color: #000000; /* Cor preta no hover */
+    color: #ffffff; /* Cor branca no hover */
     border-radius: 5px;
 }
 
@@ -49,7 +50,6 @@ nav a:hover {
 header img {
     display: block;
     width: 100%; /* Imagem ocupando a largura total */
-    height: 350px; /* Ajuste automático da altura */
+    height: 440px; /* Ajuste automático da altura */
     margin-top: -4px; /* Remove espaço extra entre header e imagem */
 }
-
