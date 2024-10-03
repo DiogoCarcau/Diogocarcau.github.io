@@ -49,7 +49,7 @@ nav a:hover {
 header img {
     display: block;
     width: 100%; /* Imagem ocupando a largura total */
-    height: auto; /* Ajuste automático da altura */
+    height: 350px; /* Ajuste automático da altura */
     margin-top: -4px; /* Remove espaço extra entre header e imagem */
 }
 
