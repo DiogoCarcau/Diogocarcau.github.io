@@ -30,13 +30,13 @@ h1 {
 nav {
     display: flex;
     justify-content: center;
-    gap: 15px; /* Espaçamento entre os links */
+    gap: 35px; /* Espaçamento entre os links */
 }
 
 nav a {
     color: #ffffff; /* Cor branca para o texto dos links */
     text-decoration: none;
-    padding: 10px 15px;
+    padding: 10px 25px;
     font-weight: bold;
 }
 
@@ -50,6 +50,7 @@ nav a:hover {
 header img {
     display: block;
     width: 100%; /* Imagem ocupando a largura total */
-    height: 440px; /* Ajuste automático da altura */
+    height: auto; /* Ajuste automático da altura */
     margin-top: -4px; /* Remove espaço extra entre header e imagem */
 }
+
