@@ -1,69 +1,67 @@
 /* Estilo geral do body */
 body {
-    background-color: #a6dced ; /* Cor de fundo para a página */
+    background-color: #79bad6; /* Fundo azul claro */
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
 }
 
-/* Estilo para o header e a barra de navegação */
-nav {
-    background-color: #4CAF50; 
+/* Estilo para o container do título */
+.title-container {
+    background-color: #79bad6; /* Fundo azul escuro para o título */
+    padding: 20px;
+    text-align: center;
+}
+
+/* Estilo do título */
+h1 {
+    color: #f3f3f3; /* Título com cor branca */
+    margin: 0;
+}
+
+/* Estilo para o container da navegação */
+.nav-container {
+    background-color: #4a3e3e; /* Cor de fundo da barra de navegação */
     padding: 10px;
-    
+}
+
+/* Estilo para a barra de navegação */
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 15px; /* Espaçamento entre os links */
 }
 
 nav a {
-    color: white;
+    color: #ffffff; /* Cor branca para o texto dos links */
     text-decoration: none;
-    padding: 10px;
+    padding: 10px 15px;
     font-weight: bold;
 }
 
 nav a:hover {
-    background-color: #369f81; /* Efeito hover nos links */
-}
-
-/* Estilo para a main section */
-main {
-    background-color: blue ;
-    padding: 20px;
-    margin: 20px;
+    background-color: #F4A460; /* Cor areia no hover */
+    color: #000000; /* Cor preta no hover */
     border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Estilo para o footer */
-footer {
-    background-color: #a6dced ;
-    color: blue;
-    text-align: center;
-    padding: 10px;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
+/* Estilo para a imagem no header */
+header img {
+    display: block;
+    width: 100%; /* Imagem ocupando a largura total */
+    height: auto; /* Ajuste automático da altura */
+    margin-top: -4px; /* Remove espaço extra entre header e imagem */
 }
 
- /* Estilo do campo de informações gerais */
- fieldset {
-    background-color: #6E787B; /* cor cinza escuro background*/
-    padding: 20px;
-    border: 2px solid rgb(16, 16, 16);
-    width: 400px;
-    margin-top: 20px; /* Adiciona espaço em cima */
-}
+/* Ajuste geral para responsividade */
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
 
-/* Estilo da legenda (título do fieldset) */
-legend {
-    font-weight: bold;
-    color: #161515;
-    padding: 5px 10px;
-    background-color: #4F5A5D; /* cor mais escura */
-    border: 1px solid black;
-}
-
-/* Estilo dos labels */
-label {
-    margin: 10px 0 5px;
-    color: #000000;
+    nav {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
 }
