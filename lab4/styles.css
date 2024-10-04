@@ -22,7 +22,7 @@ h1 {
 
 /* Estilo para o container da navegação */
 .nav-container {
-    background-color: #79bad6; /* Cor de fundo da barra de navegação */
+    background-color: #222222; /* Cor de fundo da barra de navegação */
     padding: 10px;
 }
 
@@ -46,11 +46,29 @@ nav a:hover {
     border-radius: 5px;
 }
 
-/* Estilo para a imagem no header */
-header img {
-    display: block;
-    width: 100%; /* Imagem ocupando a largura total */
-    height: auto; /* Ajuste automático da altura */
-    margin-top: -4px; /* Remove espaço extra entre header e imagem */
+/* Estilo para o container das imagens no header */
+.image-container {
+    display: flex; /* Faz as imagens ficarem lado a lado */
+    justify-content: space-between; /* Espaçamento entre elas */
+    width: 100%; /* Ocupa toda a largura do container */
+    padding: px; /* Espaçamento interno */
+    box-sizing: border-box; /* Inclui o padding no cálculo do tamanho total */
 }
 
+.image-container img {
+    width: 33%; /* Cada imagem ocupa 32% da largura para somar até 100% */
+    height: auto; /* Mantém a proporção da imagem */
+    border-radius: 3px; /* Adiciona cantos arredondados para um visual agradável */
+}
+
+/* Ajustes responsivos para telas menores */
+@media (max-width: 768px) {
+    .image-container {
+        flex-direction: column; /* Em telas menores, exibe as imagens uma abaixo da outra */
+    }
+
+    .image-container img {
+        width: 100%; /* Cada imagem ocupa 100% da largura em telas pequenas */
+        margin-bottom: 2px; /* Espaço entre as imagens */
+    }
+}
