@@ -51,24 +51,65 @@ nav a:hover {
     display: flex; /* Faz as imagens ficarem lado a lado */
     justify-content: space-between; /* Espaçamento entre elas */
     width: 100%; /* Ocupa toda a largura do container */
-    padding: px; /* Espaçamento interno */
+    padding: 20px; /* Espaçamento interno */
     box-sizing: border-box; /* Inclui o padding no cálculo do tamanho total */
 }
 
 .image-container img {
-    width: 33%; /* Cada imagem ocupa 32% da largura para somar até 100% */
+    width: 33%; /* Cada imagem ocupa 33% da largura */
     height: auto; /* Mantém a proporção da imagem */
-    border-radius: 3px; /* Adiciona cantos arredondados para um visual agradável */
+    border-radius: 3px; /* Adiciona cantos arredondados */
 }
 
-/* Ajustes responsivos para telas menores */
-@media (max-width: 768px) {
-    .image-container {
-        flex-direction: column; /* Em telas menores, exibe as imagens uma abaixo da outra */
-    }
-
-    .image-container img {
-        width: 100%; /* Cada imagem ocupa 100% da largura em telas pequenas */
-        margin-bottom: 2px; /* Espaço entre as imagens */
-    }
+/* Estilo para o formulário */
+form {
+    padding: 20px;
 }
+
+fieldset {
+    margin-bottom: 20px;
+    padding: 20px;
+    border-radius: 5px;
+    border: 2px solid #79bad6;
+}
+
+/* Estilo para labels e inputs */
+label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Estilo dos botões */
+button {
+    background-color: #79bad6;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #f3f3f3;
+    color: #222222;
+}
+
+/* Estilo para o rodapé */
+.footer {
+    background-color: #F4A460; /* Fundo do rodapé igual ao resto da página */
+    color: #ffffff; /* Texto branco */
+    text-align: center; /* Centralizar o texto */
+    padding: 15px 0; /* Espaçamento no topo e embaixo */
+    font-size: 10px; /* Tamanho da fonte */
+    font-weight: bold; /* Negrito para destacar */
+}
+

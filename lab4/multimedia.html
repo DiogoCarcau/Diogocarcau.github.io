@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html lang="pt">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Atenas</title>
-        <link rel="stylesheet" href="styles.css">
-    </head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atenas</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
     <header>
         <div class="title-container">
             <h1>Atenas</h1>
@@ -20,8 +21,6 @@
                 <a href="viagem.html">Viagem</a>
             </nav>
         </div>
-    
-        <!-- Container para as imagens -->
         <div class="image-container">
             <img src="images/foto principal a seguir a navegaçao.jpg" alt="Imagem de Atenas">
             <img src="images/plaza-sintagma.avif" alt="Imagem de Atenas">
@@ -29,43 +28,56 @@
         </div>
     </header>
 
-<!--inicio da multimedia-->
-<section id="multimedia" class="multimedia">
-    <h2>Multimedia</h2>
+    <section id="multimedia" class="multimedia">
+        <h2>Multimedia</h2>
 
-    <!-- Links âncora para h3 (Fotografia, Vídeo e Poema) -->
-    <p>
-        <a href="#fotografia">Fotografia</a> | 
-        <a href="#video">Vídeo</a> | 
-        <a href="#poema">Poema</a>
-    </p>
+        <!-- Links âncora para h3 (Fotografia, Vídeo e Poema) -->
+        <p>
+            <a href="#fotografia">Fotografia</a> | 
+            <a href="#video">Vídeo</a> | 
+            <a href="#poema">Poema</a>
+        </p>
 
-    <!-- Seção de Fotografia -->
-    <h3 id="fotografia">Fotografia</h3>
-    <a href="images/atenasfoto (1).jpg" target="_blank">
-        <img src="images/atenasfoto (1).jpg" alt="Foto 1" width="120" height="80">
-    </a>
+        <!-- Seção de Fotografia -->
+        <h3 id="fotografia">Fotografia</h3>
+        <div class="photo-gallery">
+            <div class="photo-item">
+                <a href="images/atenasfoto (1).jpg" target="_blank">
+                    <img src="images/atenasfoto (1).jpg" alt="Foto 1">
+                </a>
+                <p>Figura 1 - La La La</p>
+            </div>
+            <div class="photo-item">
+                <a href="images/caption (1).jpg" target="_blank">
+                    <img src="images/caption (1).jpg" alt="Foto 2">
+                </a>
+                <p>Figura 2 - Le Le Le</p>
+            </div>
+            <div class="photo-item">
+                <a href="images/use-this (1).jpg" target="_blank">
+                    <img src="images/use-this (1).jpg" alt="Foto 3">
+                </a>
+                <p>Figura 3 - U U U</p>
+            </div>
+        </div>
+        
+        <hr>
 
-    <a href="images/caption (1).jpg" target="_blank">
-        <img src="images/caption (1).jpg" alt="Foto 2" width="120" height="80">
-    </a>
-
-    <a href="images/use-this (1).jpg" target="_blank">
-        <img src="images/use-this (1).jpg" alt="Foto 3" width="120" height="80">
-    </a>
-
-    <!-- Seção de Vídeo -->
-    <h3 id="video">Vídeo</h3>
-    <p>
-        <iframe width="400" height="300" src="https://www.youtube.com/embed/CaVhj_bd574?si=4SUkfDo5Whhweks5" 
+        <!-- Seção de Vídeo -->
+        <h3 id="video">Vídeo</h3>
+        <p>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/CaVhj_bd574?si=4SUkfDo5Whhweks5" 
                 title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; 
-                gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
-        </iframe>
-    </p>
+                gyroscope; picture-in-picture; web-share" allowfullscreen>
+            </iframe>
+        </p>
 
-    <!-- Seção de Poema -->
-    <h3 id="poema">Poema</h3>
-    <pre>
+        <hr>
+
+        <!-- Seção de Poema -->
+        <h3 id="poema">Poema</h3>
+        <div class="poem-container">
+            <pre>
 Atenas, berço da sabedoria,
 Onde o mármore resplandece em cada rua,
 Teus templos erguidos à eternidade,
@@ -90,10 +102,13 @@ Cidade de mártir, cidade de sol,
 Resiste aos séculos, ao tempo que dói,
 Mas és sempre luz, chama a brilhar,
 Atenas, mãe eterna, sempre a inspirar.
-    </pre>
+            </pre>
+        </div>
+    </section>
 
-    <p>DIOGO, Universidade Lusófona, 2024</p>
-</section>
-
+    <!-- Rodapé -->
+    <footer class="footer">
+        <p>DIOGO, Universidade Lusófona, 2024</p>
+    </footer>
 </body>
 </html>
