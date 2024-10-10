@@ -58,7 +58,7 @@ nav a:hover {
 .image-container img {
     width: 33%; /* Cada imagem ocupa 33% da largura */
     height: auto; /* Mantém a proporção da imagem */
-    border-radius: 3px; /* Adiciona cantos arredondados */
+    border-radius: 10px; /* Adiciona cantos arredondados */
 }
 
 /* Estilo para o formulário */
