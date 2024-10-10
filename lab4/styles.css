@@ -41,7 +41,7 @@ nav a {
 }
 
 nav a:hover {
-    background-color: #F4A460; /* Cor areia no hover */
+    background-color: #4daeea; /* Cor areia no hover */
     color: #ffffff; /* Cor branca no hover */
     border-radius: 5px;
 }
@@ -105,10 +105,10 @@ button:hover {
 
 /* Estilo para o rodapé */
 .footer {
-    background-color: #F4A460; /* Fundo do rodapé igual ao resto da página */
+    background-color: #000000; /* Fundo do rodapé igual ao resto da página */
     color: #ffffff; /* Texto branco */
     text-align: center; /* Centralizar o texto */
-    padding: 15px 0; /* Espaçamento no topo e embaixo */
+    padding: 7px 0; /* Espaçamento no topo e embaixo */
     font-size: 10px; /* Tamanho da fonte */
     font-weight: bold; /* Negrito para destacar */
 }
