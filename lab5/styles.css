@@ -109,7 +109,7 @@ button:hover {
     color: #ffffff; /* Texto branco */
     text-align: center; /* Centralizar o texto */
     padding: 7px 0; /* Espaçamento no topo e embaixo */
-    font-size: 10px; /* Tamanho da fonte */
+    font-size: 7px; /* Tamanho da fonte */
     font-weight: bold; /* Negrito para destacar */
 }
 
