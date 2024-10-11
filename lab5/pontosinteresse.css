@@ -3,9 +3,9 @@ body{
     margin: 0;
    padding: 0;
     display: flex
-      align-items center;
-      height :60px;
-      background-color: #ccc;
+   align-items center;
+   height :60px;
+    background-color: #ccc;
  }
 
 .container {
@@ -21,41 +21,59 @@ body{
      background-color: #e9e9e9;
 }
 
-/* Alterar o fundo dos botões e seções para azul claro */
 .section h2 {
-   background-color: #79bad6; /* Azul do título */
-   color: white; /* Texto branco */
+   background-color: #79bad6; /* Fundo azul */
+   color: black; 
    padding: 10px;
    border-radius: 5px;
+   display: inline-block; /* Faz com que o h2 não ocupe 100% da largura */
+   max-width: 100%; /* Define uma largura máxima para o h2 */
+   margin: 0; /* Remove margens extras */
 }
-
-/* Remover a sublinha dos links dentro das seções */
-.section h2 a {
-   text-decoration: none; /* Remove a sublinha */
-   color: inherit; /* Mantém a cor original */
-}
-
-
 
 .box {
-     width: 50%;
-     height: 77px;
-     border-radius: 5px;
-     background-color: #d3d3d3;
-     border: 2px dashed #bbb;
-     display: flex;
-     justify-content: center;
-     align-items: center;
-    font-size: 10px;
-    color: #555;
+   width: 100%;
+   padding: 10px;
+   border-radius: 5px;
+   background-color: #d3d3d3;
+   display: flex;
+   font-size: 15px;
+   color: #151212;
+   font-family: 'Times New Roman', Times, serif;
+   text-align: left; /* Alinhamento do texto à esquerda */
+   max-width: 100%; /* Define uma largura máxima para a caixa */
+}
+
+.romanos {
+   list-style-type: lower-roman;
+   font-family: "Times New Roman", serif;
+   font-size: 18px;
+   color: #000;
+   padding-left: 20px; /* Controle do espaçamento da lista */
+   margin: 0; /* Remove a margem superior e inferior */
+   padding-top: 0; /* Remove qualquer preenchimento no topo */
+}
+
+
+.romanos li:nth-child(odd) {
+   color: blue; /* Azul para itens ímpares */
+}
+
+.romanos li:nth-child(even) {
+   color: black; /* Preto para itens pares */
+}
+
+
+.romanos li:nth-child(even) {
+   color: black; /* Cor preta para os itens pares */
 }
 
 .large-box {
-      height: 150px;
+      height: 100px;
 }
 
 .table-box {
-    height: 200px;
+    height: 100px;
 }
 
 /* Estilo para o container do título */
@@ -106,3 +124,10 @@ nav a:hover {
    font-size: 7px; /* Tamanho da fonte */
    font-weight: bold; /* Negrito para destacar */
 }
+
+/* Remover sublinhado de qualquer link dentro de h2 */
+h2 a {
+   text-decoration: none; /* Remove sublinhado */
+   color: inherit; /* Usa a cor do título */
+}
+
