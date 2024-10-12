@@ -9,7 +9,7 @@ body{
  }
 
 .container {
-    width: 95%;
+    width: 90%;
     background-color: #4d4c4c;
     padding: 10px;
   }
@@ -27,12 +27,12 @@ body{
    padding: 10px;
    border-radius: 5px;
    display: inline-block; /* Faz com que o h2 não ocupe 100% da largura */
-   max-width: 100%; /* Define uma largura máxima para o h2 */
+   max-width: 90%; /* Define uma largura máxima para o h2 */
    margin: 0; /* Remove margens extras */
 }
 
 .box {
-   width: 100%;
+   width: 90%;
    padding: 10px;
    border-radius: 5px;
    background-color: #d3d3d3;
@@ -41,7 +41,7 @@ body{
    color: #151212;
    font-family: 'Times New Roman', Times, serif;
    text-align: left; /* Alinhamento do texto à esquerda */
-   max-width: 100%; /* Define uma largura máxima para a caixa */
+   max-width: 90%; /* Define uma largura máxima para a caixa */
 }
 
 .romanos {
@@ -121,7 +121,7 @@ nav a:hover {
    color: #ffffff; /* Texto branco */
    text-align: center; /* Centralizar o texto */
    padding: 7px 0; /* Espaçamento no topo e embaixo */
-   font-size: 7px; /* Tamanho da fonte */
+   font-size: 10px; /* Tamanho da fonte */
    font-weight: bold; /* Negrito para destacar */
 }
 
