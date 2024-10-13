@@ -1,0 +1,62 @@
+* {
+  padding: 0; 
+  margin: 0;
+  box-sizing:border-box;
+  font-family: sans-serif;
+}
+  
+  header {
+    height: 10vh; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    background: #2b2d2e;
+    color: white;
+    justify-content:space-between
+  }
+
+  header div {
+    font-size: 2em;  
+    padding: 1em;
+  }
+
+  nav a{
+    padding:10px;
+    text-decoration: none;
+    color: #79bad6;
+   
+  }
+  
+  article {
+    height: 50vh;
+    width: 100vw;
+    background: rgb(143, 236, 239);
+    font-weight: bold;
+    font-style:italic;
+    align-content: center;
+  }
+
+  article#poema {
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center;     /* Centraliza verticalmente */
+    height: 50vh;           /* A altura do artigo */
+    text-align: center;      /* Centraliza o texto dentro do div */
+}
+
+article#images img {
+  width: 100%; /* Altera a largura para 50% do container */
+  height: auto; /* Mantém a proporção da imagem */
+  display: block; /* Remove o espaço embaixo da imagem se necessário */
+  margin: 0 auto; /* Centraliza a imagem horizontalmente */
+}
+
+  article:last-child {
+    height: 50vh;
+    width: 100vh;
+    background: black;
+    color: white;
+  }
+
+  
