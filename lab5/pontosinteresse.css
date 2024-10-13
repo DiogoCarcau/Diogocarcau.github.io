@@ -140,3 +140,39 @@ img {
    height: auto; /* Para manter a proporção da imagem */
 }
 
+ 
+.visit-table {
+   width: 100%;
+   border-collapse: collapse;
+   background-color: #78c1ee; /* Fundo azul claro */
+   margin-top: 15px;
+}
+
+.visit-table th, .visit-table td {
+   border: 1px solid #add9ec; /* Bordas azuis claras */
+   padding: 10px;
+   text-align: left;
+}
+
+.visit-table th {
+   background-color: #79bad6; /* Cabeçalhos em azul claro */
+   color: #fff; /* Texto branco nos cabeçalhos */
+}
+
+.visit-table tr:nth-child(odd) td {
+   background-color: #ffffff; /* Branco para linhas pares */
+}
+
+.visit-table tr:nth-child(even) td {
+   background-color: #79bad6; /* Azul claro para linhas ímpares */
+}
+
+
+
+
+.visit-table tr:nth-child(even) {
+   background-color: #e9f4fb; /* Alternância de linhas em azul claro */
+}
+
+
+
