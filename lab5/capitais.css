@@ -47,9 +47,9 @@
 
 article#images img {
   width: 100%; /* Altera a largura para 50% do container */
-  height: auto; /* Mantém a proporção da imagem */
+  height: 130%; /* Mantém a proporção da imagem */
   display: block; /* Remove o espaço embaixo da imagem se necessário */
-  margin: 0 auto; /* Centraliza a imagem horizontalmente */
+  margin: 2% auto; /* Centraliza a imagem horizontalmente */
 }
 
   article:last-child {
@@ -58,5 +58,10 @@ article#images img {
     background: black;
     color: white;
   }
+
+  header h2 {
+    padding-left: 30px; /* Ajuste o valor para o espaçamento que deseja */
+}
+
 
   
