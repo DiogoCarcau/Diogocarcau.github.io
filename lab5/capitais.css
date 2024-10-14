@@ -1,67 +1,99 @@
 * {
-  padding: 0; 
+  padding: 0;
   margin: 0;
-  box-sizing:border-box;
+  box-sizing: border-box;
   font-family: sans-serif;
 }
-  
-  header {
-    height: 10vh; 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    top: 0;
-    background: #2b2d2e;
-    color: white;
-    justify-content:space-between
-  }
 
-  header div {
-    font-size: 2em;  
-    padding: 1em;
-  }
+header {
+  height: 10vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #2b2d2e;
+  color: white;
+  justify-content: space-between;
+}
 
-  nav a{
-    padding:10px;
-    text-decoration: none;
-    color: #79bad6;
-   
-  }
-  
-  article {
-    height: 50vh;
-    width: 100vw;
-    background: rgb(143, 236, 239);
-    font-weight: bold;
-    font-style:italic;
-    align-content: center;
-  }
+header div {
+  font-size: 2em;
+  padding: 1em;
+}
 
-  article#poema {
-    display: flex;
-    justify-content: center; /* Centraliza horizontalmente */
-    align-items: center;     /* Centraliza verticalmente */
-    height: 50vh;           /* A altura do artigo */
-    text-align: center;      /* Centraliza o texto dentro do div */
+nav a {
+  padding: 10px; /* Reduzi o padding para não sobrepor */
+  text-decoration: none;
+  color: #79bad6;
+}
+
+article {
+  width: 100vw;
+  background: rgb(143, 236, 239);
+  font-weight: bold;
+  font-style: italic;
+  align-content: center;
+}
+
+article#poema {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+  text-align: center;
 }
 
 article#images img {
-  width: 100%; /* Altera a largura para 50% do container */
-  height: 130%; /* Mantém a proporção da imagem */
-  display: block; /* Remove o espaço embaixo da imagem se necessário */
-  margin: 2% auto; /* Centraliza a imagem horizontalmente */
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 2% auto;
 }
 
-  article:last-child {
-    height: 50vh;
-    width: 100vh;
-    background: black;
-    color: white;
-  }
-
-  header h2 {
-    padding-left: 30px; /* Ajuste o valor para o espaçamento que deseja */
+article#cidades {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 colunas */
+  gap: 20px; /* Espaço entre as células */
+  padding: 20px; /* Adicionado padding para evitar que fique tudo muito colado nas bordas */
 }
 
+article#cidades section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f5f5f5;
+  border-radius: 20px;
+  padding: 10px; /* Adicionado padding interno */
+}
 
-  
+article#cidades section img {
+  width: 100px; /* Aumentei o tamanho da imagem */
+  height: 100px;
+  border-radius: 15px;
+}
+
+article#cidades section div {
+  margin-top: 10px;
+  text-align: center;
+  font-size: 1.2em;
+}
+
+article:last-child {
+  height: 33vh;
+  width: 33vh;
+  background: black;
+  color: white;
+}
+
+header h2 {
+  padding-left: 15px;
+}
+
+/* Estilo para o rodapé */
+.footer {
+  background-color: #000000; /* Fundo do rodapé igual ao resto da página */
+  color: #ffffff; /* Texto branco */
+  text-align: center; /* Centralizar o texto */
+  padding: 7px 0; /* Espaçamento no topo e embaixo */
+  font-size: 10px; /* Tamanho da fonte */
+  font-weight: bold; /* Negrito para destacar */
+}
