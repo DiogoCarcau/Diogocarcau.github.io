@@ -49,33 +49,45 @@ article#images img {
   margin: 2% auto;
 }
 
-article#cidades {
+article#cidades  {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* 3 colunas */
-  gap: 20px; /* Espaço entre as células */
-  padding: 20px; /* Adicionado padding para evitar que fique tudo muito colado nas bordas */
+  grid-template-columns: repeat(3,1fr);
+  gap: 15px; /*espaço entre as celulas*/
+  padding: 10px;
 }
 
 article#cidades section {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
-  background-color: #f5f5f5;
-  border-radius: 20px;
-  padding: 10px; /* Adicionado padding interno */
-}
+  }
 
 article#cidades section img {
-  width: 100px; /* Aumentei o tamanho da imagem */
-  height: 100px;
-  border-radius: 15px;
+  min-width: 100px; 
+  max-width: 100px; 
+  min-height: 80px;
+  max-height: 80px;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  margin-right: 0; /* Remove o espaço à direita da imagem */
 }
 
 article#cidades section div {
-  margin-top: 10px;
   text-align: center;
   font-size: 1.2em;
+  background-color: aliceblue;
+  padding: 0 10px; /* Ajuste para remover preenchimento lateral excessivo */
+  min-width: 100px; 
+  max-width: 100px; 
+  min-height: 80px;
+  max-height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
 }
+
 
 article:last-child {
   height: 33vh;
