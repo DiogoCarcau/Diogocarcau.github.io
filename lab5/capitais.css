@@ -53,7 +53,7 @@ article#cidades  {
   display: grid;
   grid-template-columns: repeat(3,1fr);
   gap: 15px; /*espaço entre as celulas*/
-  padding: 10px;
+  padding: 65px;
 }
 
 article#cidades section {
