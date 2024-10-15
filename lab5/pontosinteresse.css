@@ -123,16 +123,11 @@ nav a:hover {
    padding: 15px; 
    font-size: 12px; 
    font-weight: bold; /* Negrito para destacar */
-   margin-top: auto;  /* Garante que o rodapé fique no final */
- }
+    margin-top: auto;  /* Garante que o rodapé fique no final */
+}
 
  html, body {
    height: 100%;
-   margin: 0;
-   padding: 0;
-   background-color: #222222;
-   color: #ffffff;
-   font-family: Arial, sans-serif;
    display: flex;
    flex-direction: column;
 }
