@@ -114,7 +114,7 @@ button:hover {
      margin-top: auto;  /* Garante que o rodapé fique no final */
 }
 
-  html, body {
+  html, body {     /*garante que a página tenha uma altura mínima igual à altura da janela,por isso que o rodape fica em baixo*/
     height: 100%;
     display: flex;
     flex-direction: column;
