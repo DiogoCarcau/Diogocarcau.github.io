@@ -105,11 +105,23 @@ button:hover {
 
 /* Estilo para o rodapé */
 .footer {
-    background-color: #000000; /* Fundo do rodapé igual ao resto da página */
-    color: #ffffff; /* Texto branco */
-    text-align: center; /* Centralizar o texto */
-    padding: 7px 0; /* Espaçamento no topo e embaixo */
-    font-size: 10px; /* Tamanho da fonte */
+    background-color: #000000; 
+    color: #ffffff; 
+    text-align: center; 
+    padding: 15px; 
+    font-size: 12px; 
     font-weight: bold; /* Negrito para destacar */
+    margin-top: auto;  /* Garante que o rodapé fique no final */
+  }
+
+  html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: #222222;
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
 }
 
