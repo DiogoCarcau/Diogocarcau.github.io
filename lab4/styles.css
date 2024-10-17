@@ -40,6 +40,8 @@ nav a {
     font-weight: bold;
 }
 
+
+
 nav a:hover {
     background-color: #4daeea; /* Cor areia no hover */
     color: #ffffff; /* Cor branca no hover */
