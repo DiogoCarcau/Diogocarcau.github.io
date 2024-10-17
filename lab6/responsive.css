@@ -37,13 +37,14 @@ h1 {
 
 /* Estilo para a barra de navegação */
 nav {
-    display: flex;
-    justify-content: center;
-    gap: 35px; /* Espaçamento entre os links */
+    display: flex; /* Torna o nav um container flexbox */
+    justify-content: space-around; /* Distribui os links uniformemente */
+    gap: 20px; /* Espaçamento horizontal entre links */
 }
 
 nav a {
-    padding: 5px 25px;
+    margin: 0; /* Remove as margens padrão */
+    padding: 10px 25px;
     color: #ffffff; /* Cor branca para o texto dos links */
     text-decoration: none;
     font-weight: bold;
@@ -63,9 +64,11 @@ nav a:hover {
     box-sizing: border-box;
 }
 
-.image-container img {
-    width: 30%; /* Cada imagem ocupa 33% da largura */
-    border-radius: 10px; /* Adiciona cantos arredondados */
+/* Estilo para o container das imagens no header */
+.image-container {
+    display: flex; /* Faz as imagens ficarem lado a lado */
+    justify-content: space-between; /* Espaçamento entre elas */
+    padding: 10px;
 }
 
 /* Estilo para o formulário */
@@ -118,36 +121,6 @@ button:hover {
     font-weight: bold; /* Negrito para destacar */
      margin-top: auto;  /* Garante que o rodapé fique no final */
 }
-
-/* Adaptação para Mobile */
-@media (min-width: 5px) {
-    body {
-        display: grid;
-        grid-template-rows: auto 1fr auto;
-        grid-template-columns: 1fr;
-        grid-template-areas:
-            "header"
-            "main"
-            "footer";
-    }
-
-    nav {
-        flex-direction: column;
-        align-items: center;
-    }
-    .image-container img {
-        width: 100%; /* Imagens ocupam 100% da largura no mobile */
-    }
-
-    .title-container {
-        padding: 5px;
-    }
-
-    button {
-        width: 10%; /* Botões ocupam a largura total no mobile */
-    }
-}
-
 
 
 /*tablet*/
