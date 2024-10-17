@@ -52,12 +52,12 @@ nav a:hover {
     display: flex; /* Faz as imagens ficarem lado a lado */
     justify-content: space-between; /* Espaçamento entre elas */
     width: 100%; /* Ocupa toda a largura do container */
-    padding: 20px; /* Espaçamento interno */
+    padding: 10px; /* Espaçamento interno */
     box-sizing: border-box; /* Inclui o padding no cálculo do tamanho total */
 }
 
 .image-container img {
-    width: 33%; /* Cada imagem ocupa 33% da largura */
+    width: 10%; /* Cada imagem ocupa 33% da largura */
     height: auto; /* Mantém a proporção da imagem */
     border-radius: 10px; /* Adiciona cantos arredondados */
 }
