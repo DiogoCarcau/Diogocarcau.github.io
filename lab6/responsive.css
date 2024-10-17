@@ -83,7 +83,7 @@ nav a:hover {
     border-radius: 5px;
 }
 
-/* Estilo para o formulário (caso haja) */
+/* Estilo para o formulário */
 form {
     padding: 20px;
 }
@@ -165,11 +165,11 @@ button:hover {
 
     /* Alinhar imagens em coluna em telas pequenas */
     .image-container {
-        flex-direction: column; /* Colocar imagens em coluna */
+        flex-direction: row; /* Colocar imagens em coluna */
     }
 
     .image-container img {
-        width: 100%; /* Imagens ocupam 100% da largura em mobile */
+        width: 32%; /* Imagens ocupam 100% da largura em mobile */
         margin-bottom: 10px;
     }
 }
