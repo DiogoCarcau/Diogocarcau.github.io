@@ -110,9 +110,4 @@ header h2 {
    margin-top: auto;  /* Garante que o rodapé fique no final */
 }
 
-html {   
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-}
 
