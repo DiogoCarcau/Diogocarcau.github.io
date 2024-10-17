@@ -1,15 +1,152 @@
+/* Reset básico para garantir que margens e padding não causem inconsistências */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
 
-/*mobile*/
-.grid-container {
-    display: grid;
-    height: 642px;
-    grid-template-columns: 1fr 3fr 2fr;
-    grid-template-rows: 20% 1fr 50px;
-    grid-template-areas:
-    'header header header'
-    'menu main right '
-    } 
+/* Configurações gerais do body */
+body {
+    background-color: #222222; /* Fundo cinzento */
+    color: #ffffff; /* Texto em branco */
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+}
 
+/* Estilo para o container do título */
+.title-container {
+    background-color: #79bad6; /* Fundo azul claro para o título */
+    padding: 10px;
+    text-align: center;
+}
+
+/* Estilo do título */
+h1 {
+    margin: 0;
+    color: #f3f3f3; /* Título com cor branca */
+}
+
+/* Estilo para o container da navegação */
+.nav-container {
+    background-color: #222222; /* Cor de fundo da barra de navegação */
+    padding: 10px;
+}
+
+/* Estilo para a barra de navegação */
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 35px; /* Espaçamento entre os links */
+}
+
+nav a {
+    padding: 5px 25px;
+    color: #ffffff; /* Cor branca para o texto dos links */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    background-color: #4daeea; /* Cor azul no hover */
+    color: #ffffff;
+    border-radius: 5px;
+}
+
+/* Estilo para o container das imagens no header */
+.image-container {
+    display: flex; /* Faz as imagens ficarem lado a lado */
+    justify-content: space-between; /* Espaçamento entre elas */
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.image-container img {
+    width: 30%; /* Cada imagem ocupa 33% da largura */
+    border-radius: 10px; /* Adiciona cantos arredondados */
+}
+
+/* Estilo para o formulário */
+form {
+    padding: 20px;
+}
+
+fieldset {
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 2px solid #79bad6;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #79bad6;
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #f3f3f3;
+    color: #222222;
+}
+
+/* Estilo para o rodapé */
+.footer {
+    background-color: #000000; 
+    color: #ffffff; 
+    text-align: center; 
+    padding: 15px; 
+    font-size: 12px; 
+    font-weight: bold; /* Negrito para destacar */
+     margin-top: auto;  /* Garante que o rodapé fique no final */
+}
+
+/* Adaptação para Mobile */
+@media (min-width: 5px) {
+    body {
+        display: grid;
+        grid-template-rows: auto 1fr auto;
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "header"
+            "main"
+            "footer";
+    }
+
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
+    .image-container img {
+        width: 100%; /* Imagens ocupam 100% da largura no mobile */
+    }
+
+    .title-container {
+        padding: 5px;
+    }
+
+    button {
+        width: 10%; /* Botões ocupam a largura total no mobile */
+    }
+}
 
 
 
