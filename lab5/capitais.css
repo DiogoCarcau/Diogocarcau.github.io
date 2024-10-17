@@ -20,6 +20,23 @@ header div {
   padding: 1em;
 }
 
+/* Estilo do título */
+h1 {
+  color: #f3f3f3; /* Título com cor branca */
+  margin-bottom: 4px;
+}
+
+h2{
+  margin-bottom: 20px;
+}
+
+li{
+  margin-bottom: 5px;
+}
+h3{
+  margin-bottom: 5px;
+}
+
 nav a {
   padding: 10px; /* Reduzi o padding para não sobrepor */
   text-decoration: none;
