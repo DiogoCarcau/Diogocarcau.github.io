@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Atenas</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    
+    <header>
+        <div class="title-container">
+            <h1>Atenas</h1>
+        </div>
+        <div class="nav-container">
+            <nav>
+                <a href="Home.html">Home</a>
+                <a href="local.html">Localização</a>
+                <a href="multimedia.html">Multimedia</a>
+                <a href="informaçao.html">Informação</a>
+                <a href="Quizz.html">Quizz</a>
+                <a href="viagem.html">Viagem</a>
+                <a href="pontosinteresse.html">Pontos de interesse</a>
+                <a href="Capitais.html">Capitais</a>
+            </nav>
+        </div>
+    
+        <!-- Container para as imagens -->
+        <div class="image-container">
+            <img src="images/foto principal a seguir a navegaçao.jpg" alt="Imagem de Atenas">
+            <img src="images/plaza-sintagma.avif" alt="Imagem de Atenas">
+            <img src="images/use-this (1).jpg" alt="Imagem de Atenas">
+        </div>
+    </header>
+    
+<body>
+    
+    <h2>Viagem</h2> 
+
+    <!-- inicio formulário e o metodo get -->
+    <form method="get" action="https://postman-echo.com/get">
+        <fieldset>
+
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome"><br><br>
+
+            <label for="apelido">Apelido:</label>
+            <input type="text" id="apelido" name="apelido"><br><br>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email"><br><br>
+
+            <!-- Date inicio -->
+            <label for="data_inicial">Data de partida:</label>
+            <input type="date" id="data_inicial" name="data_inicial"><br><br>
+
+            <!-- Date fim -->
+            <label for="data_final">Data de regresso:</label>
+            <input type="date" id="data_final" name="data_final"><br><br>
+ 
+            <!-- Pergunta Number -->
+            <label for="passageiros">Número de passageiros:</label><br>
+            <input type="number" id="passageiros" name="passageiros"><br><br>
+ 
+            <p>Qual é o seu meio de transporte favorito?</p>
+            <input type="radio" id="carro" name="automovel" value="carro">
+            <label for="carro">Carro</label><br>
+            <input type="radio" id="aviao" name="automovel" value="aviao">
+            <label for="aviao">Avião</label><br>
+            <input type="radio" id="comboio" name="automovel" value="comboio">
+            <label for="comboio">Comboio</label><br>
+
+            <p>Qual o serviço que deseja na sua viagem?</p>
+            <input type="radio" id="basico" name="pacote" value="basico">
+            <label for="basico">Básico</label><br>
+            <input type="radio" id="premium" name="pacote" value="premium">
+            <label for="premium">Premium</label><br>
+
+            <!-- Pedido especial -->
+            <label for="pedidos_especiais">Pedidos especiais:</label><br>
+            <textarea id="pedidos_especiais" name="pedidos_especiais" rows="4" cols="40" placeholder="Digite seus pedidos especiais aqui..."></textarea><br><br>
+
+            <!-- Valor por pessoa e por dia -->
+            <label for="valor_por_pessoa">Valor esperado por pessoa e por dia:</label><br>
+            <input type="number" id="valor_por_pessoa" name="valor_por_pessoa" step="0.01" placeholder="Ex: 100.00"><br><br>
+
+            <!-- Pergunta Reset e Submit -->
+            <button type="reset">Reiniciar respostas</button>
+            <button type="submit">Submeter Quizz</button>
+        </fieldset>
+        <!-- Rodapé -->
+ <footer class="footer">
+    <p>DIOGO, Universidade Lusófona, 2024</p>
+</footer>
+    </form>
+</body>
+</html>

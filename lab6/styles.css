@@ -1,0 +1,124 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #222222; /* Fundo cinzento */
+    color: #ffffff; /* Texto em branco */
+    font-family: Arial, sans-serif;
+}
+
+/* Estilo para o container do título */
+.title-container {
+    background-color: #79bad6; /* Fundo azul claro para o título */
+    padding: 20px;
+    text-align: center;
+}
+
+/* Estilo do título */
+h1 {
+    margin: 0;
+    color: #f3f3f3; /* Título com cor branca */
+}
+
+
+/* Estilo para o container da navegação */
+.nav-container {
+    background-color: #222222; /* Cor de fundo da barra de navegação */
+    padding: 10px;
+}
+
+/* Estilo para a barra de navegação */
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 35px; /* Espaçamento entre os links */
+}
+
+nav a {
+    padding: 10px 25px;
+    color: #ffffff; /* Cor branca para o texto dos links */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+
+nav a:hover {
+    background-color: #4daeea; /* Cor azul no hover */
+    color: #ffffff; /* Cor branca no hover */
+    border-radius: 5px;
+}
+
+/* Estilo para o container das imagens no header */
+.image-container {
+    display: flex; /* Faz as imagens ficarem lado a lado */
+    justify-content: space-between; /* Espaçamento entre elas */
+    width: 100%; /* Ocupa toda a largura do container */
+    padding: 20px; /* Espaçamento interno */
+    box-sizing: border-box; /* Inclui o padding no cálculo do tamanho total */
+}
+
+.image-container img {
+    width: 33%; /* Cada imagem ocupa 33% da largura */
+    height: auto; /* Mantém a proporção da imagem */
+    border-radius: 10px; /* Adiciona cantos arredondados */
+}
+
+/* Estilo para o formulário */
+form {
+    padding: 20px;
+}
+
+fieldset {
+    margin-bottom: 20px;
+    padding: 20px;
+    border-radius: 5px;
+    border: 2px solid #79bad6;
+}
+
+/* Estilo para labels e inputs */
+label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #79bad6;
+    color: white;
+    cursor: pointer;
+}
+
+
+button:hover {
+    background-color: #f3f3f3;
+    color: #222222;
+}
+
+
+
+/* Estilo para o rodapé */
+.footer {
+    background-color: #000000; 
+    color: #ffffff; 
+    text-align: center; 
+    padding: 15px; 
+    font-size: 12px; 
+    font-weight: bold; /* Negrito para destacar */
+     margin-top: auto;  /* Garante que o rodapé fique no final */
+}
+
+  html, body {   /*garante que a página tenha uma altura mínima igual à altura da janela,por isso que o rodape fica em baixo*/
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
