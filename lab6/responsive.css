@@ -29,11 +29,10 @@ h1 {
     color: #f3f3f3; /* Título com cor branca */
 }
 
-/* Estilo do botão hambúrguer */
+/* Exibir botão hambúrguer em mobile */
 .menu-toggle {
-    display: none; /* Escondido por padrão, mas mostrado em mobile */
+    display: none;
     background-color: #222222;
-    border: none;
     color: white;
     font-size: 24px;
     padding: 10px;
@@ -44,6 +43,10 @@ h1 {
 
 .menu-toggle:focus {
     outline: none;
+}
+
+.menu-toggle-checkbox {
+    display: none;
 }
 
 /* Estilo para o container da navegação */
@@ -135,7 +138,7 @@ button:hover {
 }
 
 /* Estilos responsivos para mobile */
-@media (max-width: 768px) {
+@media (max-width: 425px) {
 
     /* Exibir botão hambúrguer */
     .menu-toggle {
@@ -151,10 +154,11 @@ button:hover {
         gap: 0;
     }
 
-    /* Exibir navegação quando a classe active estiver ativa */
-    .nav-container.active {
-        display: flex; /* Exibe o menu ao clicar no hambúrguer */
+     /* Exibir navegação quando checkbox estiver marcado, qaundo os 3 ativos abre hamburger */
+     .menu-toggle-checkbox:checked + .menu-toggle + .nav-container {
+        display: flex;
     }
+
 
     /* Links da navegação em mobile */
     nav a {
@@ -175,7 +179,7 @@ button:hover {
 }
 
 /* Estilos para telas maiores (tablet e acima) */
-@media (min-width: 769px) {
+@media (min-width: 426px) {
     /* Barra de navegação horizontal */
     .nav-container {
         display: flex; /* Exibe o menu na horizontal em telas maiores */
@@ -199,5 +203,5 @@ button:hover {
         width: 30%; /* Ajuste de largura para telas maiores */
     }
 
-    /* Pode adicionar mais regras de layout específico aqui */
+    
 }
