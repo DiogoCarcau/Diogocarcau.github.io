@@ -172,7 +172,7 @@ button:hover {
 }
 
 /* Estilos responsivos para mobile */
-@media (max-width: 425px) {
+@media  only screen and (max-width: 767px) {
 
     /* Exibir botão hambúrguer */
     .menu-toggle {
@@ -213,9 +213,9 @@ button:hover {
 }
 
 /* Estilos para telas maiores (tablet e acima) */
-@media (min-width: 426px) {
-   /* Exibir botão hambúrguer */
-   .menu-toggle {
+@media only screen and(min-width: 768px) and (max-width: 1023px) {
+  /* Exibir botão hambúrguer */
+  .menu-toggle {
     display: block; /* Mostrar o botão hambúrguer */
 }
 
@@ -253,11 +253,19 @@ nav a {
 }
 
 /* Estilos para desktop */
-@media (min-width: 1024px) {
+@media only screen and (min-width: 1024px) and  (max-width: 2559px) {
+    /* Imagens ainda em linha, sem mudanças */
+    .image-container img {
+        width: 30%; /* Ajuste de largura para telas maiores */
+    }
+}
+
+@media only screen and (min-width: 2560px) {
     /* Imagens ainda em linha, sem mudanças */
     .image-container img {
         width: 30%; /* Ajuste de largura para telas maiores */
     }
 
-    
 }
+
+
