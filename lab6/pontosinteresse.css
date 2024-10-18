@@ -5,7 +5,7 @@ body{
     display: flex
    align-items center;
    height :60px;
-    background-color: #ccc;
+    background-color: #222222;
  }
 
 .container {
@@ -174,12 +174,140 @@ img {
    background-color: #79bad6; /* Azul claro para linhas ímpares */
 }
 
-
-
-
 .visit-table tr:nth-child(even) {
    background-color: #e9f4fb; /* Alternância de linhas em azul claro */
 }
+
+
+
+
+/* Exibir botão hambúrguer em mobile */
+.menu-toggle {
+   display: none;
+   background-color: #222222;
+   color: white;
+   font-size: 24px;
+   padding: 10px;
+   cursor: pointer;
+   text-align: left;
+   width: 100%;
+}
+
+.menu-toggle:focus {
+   outline: none;
+}
+
+.menu-toggle-checkbox {
+   display: none;
+}
+
+/* Estilo para o container das imagens no header */
+.image-container {
+   display: flex; /* Faz as imagens ficarem lado a lado */
+   justify-content: space-between; /* Espaçamento entre elas */
+   padding: 10px;
+   box-sizing: border-box;
+   margin-bottom: 20px;
+}
+
+.image-container img {
+   width: 32%; /* Cada imagem ocupa aproximadamente 1/3 da largura */
+   border-radius: 5px;
+}
+
+
+
+/* Estilos responsivos para mobile */
+@media (max-width: 425px) {
+
+   /* Exibir botão hambúrguer */
+   .menu-toggle {
+       display: block; /* Mostrar o botão hambúrguer */
+   }
+
+   /* Esconder a navegação por padrão em dispositivos móveis */
+   .nav-container {
+       display: none; /* Oculta a navegação em mobile por padrão */
+       flex-direction:column;
+       background-color: #222222;
+       padding: 0;
+       gap: 0;
+   }
+
+    /* Exibir navegação quando checkbox estiver marcado, qaundo os 3 ativos abre hamburger */
+    .menu-toggle-checkbox:checked + .menu-toggle + .nav-container {
+       display: flex;
+   }
+
+
+   /* mobile */
+   nav a {
+       padding: 15px;
+       text-align: center;
+       border-bottom: 1px solid #4daeea;
+   }
+
+   /* Alinhar imagens em coluna em telas pequenas */
+   .image-container {
+       flex-direction: row; /* Colocar imagens em coluna */
+   }
+
+   .image-container img {
+       width: 32%; /* Imagens ocupam 100% da largura em mobile */
+       margin-bottom: 10px;
+   }
+}
+
+/*tablet*/
+@media (min-width: 426px) {
+  /* Exibir botão hambúrguer */
+  .menu-toggle {
+   display: block; /* Mostrar o botão hambúrguer */
+}
+
+/* Esconder a navegação por padrão em dispositivos móveis */
+.nav-container {
+   display: none; /* Oculta a navegação em mobile por padrão */
+   flex-direction:column;
+   background-color: #222222;
+   padding: 0;
+   gap: 0;
+}
+
+/* Exibir navegação quando checkbox estiver marcado, qaundo os 3 ativos abre hamburger */
+.menu-toggle-checkbox:checked + .menu-toggle + .nav-container {
+   display: flex;
+}
+
+
+/* Links da navegação em mobile */
+nav a {
+   padding: 15px;
+   text-align: center;
+   border-bottom: 1px solid #4daeea;
+}
+
+/* Alinhar imagens em coluna em telas pequenas */
+.image-container {
+   flex-direction: row; /* Colocar imagens em coluna */
+}
+
+.image-container img {
+   width: 32%; /* Imagens ocupam 100% da largura em mobile */
+   margin-bottom: 10px;
+}
+}
+
+
+@media (min-width: 1024px) {
+   /* Imagens ainda em linha, sem mudanças */
+   .image-container img {
+       width: 30%; /* Ajuste de largura para telas maiores */
+   }
+
+   
+}
+
 
 
 

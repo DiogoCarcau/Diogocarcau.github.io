@@ -42,7 +42,7 @@ h1 {
 }
 
 h2{
-    margin-bottom: 20px;
+    margin-bottom: 13px;
 }
 
 li{
@@ -52,6 +52,8 @@ h3{
     margin-bottom: 5px;
 }
 
+
+
 /* Exibir botão hambúrguer em mobile */
 .menu-toggle {
     display: none;
@@ -60,7 +62,7 @@ h3{
     font-size: 24px;
     padding: 10px;
     cursor: pointer;
-    text-align: center;
+    text-align: left;
     width: 100%;
 }
 
@@ -108,6 +110,14 @@ nav a:hover {
 .image-container img {
     width: 32%; /* Cada imagem ocupa aproximadamente 1/3 da largura */
     border-radius: 5px;
+}
+
+p{
+    margin-bottom: 20px;
+}
+
+iframe{
+    margin-bottom: 20pxS;
 }
 
 /* Estilo para o formulário */
@@ -172,7 +182,7 @@ button:hover {
     /* Esconder a navegação por padrão em dispositivos móveis */
     .nav-container {
         display: none; /* Oculta a navegação em mobile por padrão */
-        flex-direction: column;
+        flex-direction:column;
         background-color: #222222;
         padding: 0;
         gap: 0;
@@ -204,20 +214,42 @@ button:hover {
 
 /* Estilos para telas maiores (tablet e acima) */
 @media (min-width: 426px) {
-    /* Barra de navegação horizontal */
-    .nav-container {
-        display: flex; /* Exibe o menu na horizontal em telas maiores */
-        flex-direction: row;
-        justify-content: space-around;
-    }
+   /* Exibir botão hambúrguer */
+   .menu-toggle {
+    display: block; /* Mostrar o botão hambúrguer */
+}
 
-    .image-container {
-        flex-direction: row; /* Manter as imagens em linha */
-    }
+/* Esconder a navegação por padrão em dispositivos móveis */
+.nav-container {
+    display: none; /* Oculta a navegação em mobile por padrão */
+    flex-direction:column;
+    background-color: #222222;
+    padding: 0;
+    gap: 0;
+}
 
-    .image-container img {
-        width: 32%; /* Imagens ocupam 1/3 da largura */
-    }
+ /* Exibir navegação quando checkbox estiver marcado, qaundo os 3 ativos abre hamburger */
+ .menu-toggle-checkbox:checked + .menu-toggle + .nav-container {
+    display: flex;
+}
+
+
+/* Links da navegação em mobile */
+nav a {
+    padding: 15px;
+    text-align: center;
+    border-bottom: 1px solid #4daeea;
+}
+
+/* Alinhar imagens em coluna em telas pequenas */
+.image-container {
+    flex-direction: row; /* Colocar imagens em coluna */
+}
+
+.image-container img {
+    width: 32%; /* Imagens ocupam 100% da largura em mobile */
+    margin-bottom: 10px;
+}
 }
 
 /* Estilos para desktop */
