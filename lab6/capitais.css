@@ -110,4 +110,35 @@ header h2 {
    margin-top: auto;  /* Garante que o rodapé fique no final */
 }
 
+img{
+  position:relative;
+}
+a:link { color: purple; }
+a:visited { color: gray; }
+a:hover { color: white; }
+a:active { color: red; }
+
+/* Estilo para o efeito Parallax */
+.parallax {
+  position: relative;
+  background-image: url('images/parallax-image.jpg'); /* Substitua com o caminho da sua imagem */
+  height: 500px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-top: 20px;
+}
+
+.parallax-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 2rem;
+  background-color: rgba(0, 0, 0, 0.5); /* Fundo semi-transparente para o texto */
+  padding: 20px;
+  border-radius: 10px;
+}
+
 
