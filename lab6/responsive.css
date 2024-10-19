@@ -27,7 +27,6 @@ table, th, td {
     padding: 8px;
 }
 
-
 /* Estilo para o container do título */
 .title-container {
     background-color: #79bad6; /* Fundo azul claro para o título */
@@ -55,18 +54,17 @@ table, th, td {
     display: none;
 }
 
-
 /* Ajuste para a barra de navegação */
 .nav-container {
-    max-width: 1200px; /* Largura máxima igual ao container */
+    max-width: 1200px; /* Largura máxima da barra de navegação */
     margin: 0 auto; /* Centraliza a barra de navegação */
     display: flex;
     justify-content: space-around;
     gap: 20px;
     background-color: #222222;
     padding: 10px;
+    flex-wrap: wrap; /* Permite quebrar a linha se necessário */
 }
-
 
 /* Estilo para os links de navegação */
 nav a {
@@ -97,12 +95,11 @@ nav a:hover {
     border-radius: 5px;
 }
 
-p{
+p {
     margin-left: 10px;
 }
 
-
-iframe{
+iframe {
     margin-left: 10px;
 }
 
@@ -117,14 +114,15 @@ h1 {
     margin-left: 10px;
 }
 
-h2{
+h2 {
     margin-left: 10px;
 }
 
-li{
+li {
     margin-left: 10px;
 }
-h3{
+
+h3 {
     margin-left: 10px;
 }
 
@@ -175,7 +173,7 @@ button:hover {
 }
 
 /* Estilos responsivos para mobile */
-@media  only screen and (max-width: 767px) {
+@media only screen and (max-width: 767px) {
 
     /* Exibir botão hambúrguer */
     .menu-toggle {
@@ -185,17 +183,16 @@ button:hover {
     /* Esconder a navegação por padrão em dispositivos móveis */
     .nav-container {
         display: none; /* Oculta a navegação em mobile por padrão */
-        flex-direction:column;
+        flex-direction: column;
         background-color: #222222;
         padding: 0;
         gap: 0;
     }
 
-     /* Exibir navegação quando checkbox estiver marcado, qaundo os 3 ativos abre hamburger */
-     .menu-toggle-checkbox:checked + .menu-toggle + .nav-container {
+    /* Exibir navegação quando checkbox estiver marcado */
+    .menu-toggle-checkbox:checked + .menu-toggle + .nav-container {
         display: flex;
     }
-
 
     /* Links da navegação em mobile */
     nav a {
@@ -206,51 +203,75 @@ button:hover {
 
     /* Alinhar imagens em coluna em telas pequenas */
     .image-container {
-        flex-direction: row; /* Colocar imagens em coluna */
+        flex-direction: column; /* Colocar imagens em coluna */
     }
 
     .image-container img {
-        width: 32%; /* Imagens ocupam 100% da largura em mobile */
+        width: 100%; /* Imagens ocupam 100% da largura em mobile */
         margin-bottom: 10px;
     }
 }
 
+/* Estilos para telas maiores (tablet e acima) */
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
-    .nav-container {
-        display: flex;
-        justify-content: center; /* Centraliza os itens de navegação */
-        flex-wrap: wrap; /* Permite a quebra de linha se necessário */
+
+    /* Exibir botão hambúrguer */
+    .menu-toggle {
+        display: block; /* Mostrar o botão hambúrguer */
     }
 
+    /* Esconder a navegação por padrão em dispositivos móveis */
+    .nav-container {
+        display: none; /* Oculta a navegação em mobile por padrão */
+        flex-direction: column;
+        background-color: #222222;
+        padding: 0;
+        gap: 0;
+    }
+
+    /* Exibir navegação quando checkbox estiver marcado */
+    .menu-toggle-checkbox:checked + .menu-toggle + .nav-container {
+        display: flex;
+    }
+
+    /* Links da navegação em tablets */
     nav a {
-        font-size: 14px; /* Tamanho de fonte menor para tablets */
-        padding: 10px 15px; /* Reduz o padding para melhor ajuste */
+        padding: 10px 15px; /* Reduz o padding para tablets */
+        text-align: center;
+        font-size: 14px; /* Ajusta o tamanho da fonte */
+        border-bottom: 1px solid #4daeea;
+    }
+
+    /* Imagens ainda em linha */
+    .image-container {
+        flex-direction: row;
+    }
+
+    .image-container img {
+        width: 32%; /* Imagens ocupam 32% da largura em tablets */
+        margin-bottom: 10px;
     }
 }
 
-
-
 /* Estilos para desktop */
-@media only screen and (min-width: 1024px) and  (max-width: 2559px) {
+@media only screen and (min-width: 1024px) and (max-width: 2559px) {
 
     .container {
         max-width: 2559px; /* Defina o tamanho máximo do site */
         margin: 0 auto; /* Centraliza o conteúdo */
         padding: 0 15px; /* Espaço nas laterais */
     }
+
     /* Imagens ainda em linha, sem mudanças */
     .image-container img {
         width: 30%; /* Ajuste de largura para telas maiores */
     }
 }
-
 
 @media only screen and (min-width: 2560px) {
+
     /* Imagens ainda em linha, sem mudanças */
     .image-container img {
         width: 30%; /* Ajuste de largura para telas maiores */
     }
-
 }
-
-
