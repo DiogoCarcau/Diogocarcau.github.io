@@ -182,13 +182,6 @@ button:hover {
         display: block; /* Mostrar o botão hambúrguer */
     }
 
-    .container {
-        max-width: 767px; /* Defina o tamanho máximo do site */
-        margin: 0 auto; /* Centraliza o conteúdo */
-        padding: 0 15px; /* Espaço nas laterais */
-    }
-     
-
     /* Esconder a navegação por padrão em dispositivos móveis */
     .nav-container {
         display: none; /* Oculta a navegação em mobile por padrão */
@@ -224,49 +217,45 @@ button:hover {
 
 /* Estilos para telas maiores (tablet e acima) */
 @media only screen and(min-width: 768px) and (max-width: 1023px) {
-    .container {
-        max-width: 1023px; /* Defina o tamanho máximo do site */
-        margin: 0 auto; /* Centraliza o conteúdo */
-        padding: 0 15px; /* Espaço nas laterais */
+  
+    /* Exibir botão hambúrguer */
+    .menu-toggle {
+        display: block; /* Mostrar o botão hambúrguer */
     }
 
-  /* Exibir botão hambúrguer */
-  .menu-toggle {
-    display: block; /* Mostrar o botão hambúrguer */
-}
+    /* Esconder a navegação por padrão em dispositivos móveis */
+    .nav-container {
+        display: none; /* Oculta a navegação em mobile por padrão */
+        flex-direction:column;
+        background-color: #222222;
+        padding: 0;
+        gap: 0;
+    }
 
-/* Esconder a navegação por padrão em dispositivos móveis */
-.nav-container {
-    display: none; /* Oculta a navegação em mobile por padrão */
-    flex-direction:column;
-    background-color: #222222;
-    padding: 0;
-    gap: 0;
-}
-
- /* Exibir navegação quando checkbox estiver marcado, qaundo os 3 ativos abre hamburger */
- .menu-toggle-checkbox:checked + .menu-toggle + .nav-container {
-    display: flex;
-}
+     /* Exibir navegação quando checkbox estiver marcado, qaundo os 3 ativos abre hamburger */
+     .menu-toggle-checkbox:checked + .menu-toggle + .nav-container {
+        display: flex;
+    }
 
 
-/* Links da navegação em mobile */
-nav a {
-    padding: 15px;
-    text-align: center;
-    border-bottom: 1px solid #4daeea;
+    /* Links da navegação em mobile */
+    nav a {
+        padding: 15px;
+        text-align: center;
+        border-bottom: 1px solid #4daeea;
+    }
+
+    /* Alinhar imagens em coluna em telas pequenas */
+    .image-container {
+        flex-direction: row; /* Colocar imagens em coluna */
+    }
+
+    .image-container img {
+        width: 32%; /* Imagens ocupam 100% da largura em mobile */
+        margin-bottom: 10px;
+    }
 }
 
-/* Alinhar imagens em coluna em telas pequenas */
-.image-container {
-    flex-direction: row; /* Colocar imagens em coluna */
-}
-
-.image-container img {
-    width: 32%; /* Imagens ocupam 100% da largura em mobile */
-    margin-bottom: 10px;
-}
-}
 
 /* Estilos para desktop */
 @media only screen and (min-width: 1024px) and  (max-width: 2559px) {
