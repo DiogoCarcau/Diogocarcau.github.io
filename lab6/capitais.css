@@ -141,4 +141,35 @@ a:active { color: red; }
   border-radius: 10px;
 }
 
+p{
+  margin-left: 10px;
+}
+
+
+iframe{
+  margin-left: 10px;
+}
+
+/* Estilo para o formulário */
+form {
+  padding: 20px;
+}
+
+/* Estilo do título */
+h1 {
+  color: #f3f3f3; /* Título com cor branca */
+  margin-left: 10px;
+}
+
+h2{
+  margin-left: 10px;
+}
+
+li{
+  margin-left: 10px;
+}
+h3{
+  margin-left: 10px;
+}
+
 
