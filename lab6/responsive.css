@@ -55,14 +55,18 @@ table, th, td {
     display: none;
 }
 
-/* Estilo para o container da navegação */
+
+/* Ajuste para a barra de navegação */
 .nav-container {
-    display: flex; /* Torna o nav um container flexbox */
-    justify-content: space-around; /* Distribui os links uniformemente */
-    gap: 20px; /* Espaçamento horizontal entre links */
-    background-color: #222222; /* Cor de fundo da barra de navegação */
+    max-width: 1200px; /* Largura máxima igual ao container */
+    margin: 0 auto; /* Centraliza a barra de navegação */
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    background-color: #222222;
     padding: 10px;
 }
+
 
 /* Estilo para os links de navegação */
 nav a {
@@ -178,6 +182,13 @@ button:hover {
         display: block; /* Mostrar o botão hambúrguer */
     }
 
+    .container {
+        max-width: 767px; /* Defina o tamanho máximo do site */
+        margin: 0 auto; /* Centraliza o conteúdo */
+        padding: 0 15px; /* Espaço nas laterais */
+    }
+     
+
     /* Esconder a navegação por padrão em dispositivos móveis */
     .nav-container {
         display: none; /* Oculta a navegação em mobile por padrão */
@@ -213,6 +224,12 @@ button:hover {
 
 /* Estilos para telas maiores (tablet e acima) */
 @media only screen and(min-width: 768px) and (max-width: 1023px) {
+    .container {
+        max-width: 1023px; /* Defina o tamanho máximo do site */
+        margin: 0 auto; /* Centraliza o conteúdo */
+        padding: 0 15px; /* Espaço nas laterais */
+    }
+
   /* Exibir botão hambúrguer */
   .menu-toggle {
     display: block; /* Mostrar o botão hambúrguer */
@@ -253,6 +270,12 @@ nav a {
 
 /* Estilos para desktop */
 @media only screen and (min-width: 1024px) and  (max-width: 2559px) {
+
+    .container {
+        max-width: 2559px; /* Defina o tamanho máximo do site */
+        margin: 0 auto; /* Centraliza o conteúdo */
+        padding: 0 15px; /* Espaço nas laterais */
+    }
     /* Imagens ainda em linha, sem mudanças */
     .image-container img {
         width: 30%; /* Ajuste de largura para telas maiores */
