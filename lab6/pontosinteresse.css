@@ -6,26 +6,26 @@ body {
    background-color: #222222;
    display: flex;
    flex-direction: column;
-   min-height: 100vh; /* Garante que o conteúdo ocupe toda a altura */
+   min-height: 100vh; 
 }
 
 .container {
    width: 90%;
    background-color: #4d4c4c;
    padding: 10px;
-   margin: 0 auto; /* Centraliza o container */
+   margin: 0 auto; 
 }
 
 p, li, h2, h3 {
    margin-left: 10px;
 }
 
-/* Estilo para o formulário */
+/*  formulário */
 form {
    padding: 20px;
 }
 
-/* Estilos para o título */
+
 h1 {
    color: #f3f3f3;
    margin-left: 10px;
@@ -43,7 +43,6 @@ h3 {
    margin-left: 10px;
 }
 
-/* Estilo das seções */
 .section {
    margin-bottom: 15px;
    padding: 8px;
@@ -91,7 +90,6 @@ h3 {
    color: black;
 }
 
-/* Estilo para imagens no container */
 .image-container img {
    max-width: 100%;
    height: auto;
@@ -99,19 +97,18 @@ h3 {
    margin: 10px auto; /* Centraliza a imagem */
 }
 
-/* Estilos responsivos para dispositivos móveis */
+/*  móveis */
 @media only screen and (max-width: 767px) {
    .container {
-       width: 100%; /* O container ocupa toda a largura da tela */
-       padding: 5px; /* Reduz o padding */
+       width: 100%; 
+       padding: 5px; 
    }
 
    p, li, h2, h3 {
-       font-size: 14px; /* Tamanho do texto reduzido */
-       margin-left: 5px; /* Margem menor em dispositivos móveis */
+       font-size: 14px; 
+       margin-left: 5px; 
    }
 
-   /* Ajuste das seções para mobile */
    .section {
        padding: 5px;
    }
@@ -126,28 +123,26 @@ h3 {
        padding: 8px;
    }
 
-   /* Alinhamento de imagens em colunas */
    .image-container {
        flex-direction: column;
    }
 
    .image-container img {
-       width: 100%; /* Imagens ocupam toda a largura */
+       width: 100%; 
    }
 
-   /* Ajustar a tabela de visitas */
    .visit-table {
-       font-size: 12px; /* Texto menor para caber melhor na tela */
+       font-size: 12px; 
    }
 
    /* Botão hambúrguer visível */
    .menu-toggle {
        display: block;
-       font-size: 20px; /* Ajuste do tamanho da fonte */
+       font-size: 20px; 
    }
 }
 
-/* Estilos responsivos para tablets */
+
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
    .nav-container {
        display: flex;
@@ -165,36 +160,20 @@ h3 {
    }
 
    .image-container img {
-       width: 90%; /* Reduz o tamanho das imagens */
+       width: 90%; 
    }
 }
 
-/* Estilos para desktop */
-@media only screen and (min-width: 1024px) {
-   .container {
-       max-width: 1200px;
-       margin: 0 auto;
-       padding: 20px;
-   }
 
-   .image-container img {
-       width: 30%;
-   }
 
-   nav a {
-       font-size: 16px;
-   }
-}
-
-/* Estilo para o rodapé */
 .footer {
    background-color: #000000; 
    color: #ffffff; 
    text-align: center; 
    padding: 15px; 
    font-size: 12px; 
-   font-weight: bold; /* Negrito para destacar */
-   margin-top: auto;  /* Garante que o rodapé fique no final */
+   font-weight: bold; 
+   margin-top: auto;  
 }
 
 /* Remover sublinhado de qualquer link dentro de h2 */
@@ -203,12 +182,12 @@ h2 a {
    color: inherit;
 }
 
-/* Imagem */
+
 img {
    display: block;
    margin-left: auto;
    margin-right: auto;
-   max-width: 100%; /* Para garantir que a imagem não ultrapasse o tamanho do container */
+   max-width: 100%; 
    height: auto;
 }
 
@@ -216,7 +195,7 @@ img {
 .visit-table {
    width: 100%;
    border-collapse: collapse;
-   background-color: #78c1ee; /* Fundo azul claro */
+   background-color: #78c1ee; 
    margin-top: 15px;
 }
 
@@ -243,7 +222,7 @@ img {
    background-color: #e9f4fb;
 }
 
-/* Exibir botão hambúrguer em mobile */
+/*  botão hambúrguer mobile */
 .menu-toggle {
    display: none;
    background-color: #222222;
@@ -273,29 +252,13 @@ img {
 }
 
 .image-container img {
-   width: 32%; /* Cada imagem ocupa aproximadamente 1/3 da largura */
+   width: 32%; 
    border-radius: 5px;
 }
 
-/* Estilos responsivos para tablets */
-@media only screen and (min-width: 768px) and (max-width: 1023px) {
-   .nav-container {
-       display: flex;
-       justify-content: center;
-       flex-wrap: wrap;
-   }
 
-   nav a {
-       font-size: 14px;
-       padding: 10px 15px;
-   }
 
-   .image-container img {
-       width: 90%;
-   }
-}
-
-/* Estilos para telas grandes (desktop) */
+/* desktop */
 @media only screen and (min-width: 1024px) and (max-width: 2559px) {
    .container {
        max-width: 2559px;
@@ -308,7 +271,7 @@ img {
    }
 }
 
-/* Estilos para telas ultra-largas */
+/* 4k */
 @media only screen and (min-width: 2560px) {
    .image-container img {
        width: 30%;

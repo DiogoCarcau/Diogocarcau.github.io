@@ -22,13 +22,13 @@ body{
 }
 
 .section h2 {
-   background-color: #79bad6; /* Fundo azul */
+   background-color: #79bad6; 
    color: black; 
    padding: 10px;
    border-radius: 5px;
    display: inline-block; /* Faz com que o h2 não ocupe 100% da largura */
    max-width: 90%; /* Define uma largura máxima para o h2 */
-   margin: 0; /* Remove margens extras */
+   margin: 0; 
 }
 
 .box {
@@ -41,7 +41,7 @@ body{
    color: #151212;
    font-family: 'Times New Roman', Times, serif;
    text-align: left; /* Alinhamento do texto à esquerda */
-   max-width: 90%; /* Define uma largura máxima para a caixa */
+   max-width: 90%; 
 }
 
 .romanos {
@@ -50,22 +50,22 @@ body{
    font-size: 14px;
    color: #000;
    padding-left: 20px; /* Controle do espaçamento da lista */
-   margin: 0; /* Remove a margem superior e inferior */
-   padding-top: 0; /* Remove qualquer preenchimento no topo */
+   margin: 0; 
+   padding-top: 0; 
 }
 
 
 .romanos li:nth-child(odd) {
-   color: blue; /* Azul para itens ímpares */
+   color: blue; 
 }
 
 .romanos li:nth-child(even) {
-   color: black; /* Preto para itens pares */
+   color: black; 
 }
 
 
 .romanos li:nth-child(even) {
-   color: black; /* Cor preta para os itens pares */
+   color: black;
 }
 
 .large-box {
@@ -76,16 +76,14 @@ body{
     height: 100px;
 }
 
-/* Estilo para o container do título */
 .title-container {
-   background-color: #79bad6; /* Fundo azul claro para o título */
+   background-color: #79bad6; 
    padding: 20px;
    text-align: center;
 }
 
-/* Estilo do título */
 h1 {
-   color: #f3f3f3; /* Título com cor branca */
+   color: #f3f3f3; 
    margin-bottom: 4px;
 }
 
@@ -100,29 +98,29 @@ h3{
    margin-bottom: 5px;
 }
 
-/* Estilo para o container da navegação */
+
 .nav-container {
-   background-color: #222222; /* Cor de fundo da barra de navegação */
+   background-color: #222222; 
    padding: 10px;
 }
 
-/* Estilo para a barra de navegação */
+
 nav {
    display: flex;
    justify-content: center;
-   gap: 35px; /* Espaçamento entre os links */
+   gap: 35px; 
 }
 
 nav a {
-   color: #ffffff; /* Cor branca para o texto dos links */
+   color: #ffffff; 
    text-decoration: none;
    padding: 10px 25px;
    font-weight: bold;
 }
 
 nav a:hover {
-   background-color: #4daeea; /* Cor azul no hover */
-   color: #ffffff; /* Cor branca no hover */
+   background-color: #4daeea;
+   color: #ffffff; 
    border-radius: 5px;
 }
 
@@ -133,8 +131,8 @@ nav a:hover {
    text-align: center; 
    padding: 15px; 
    font-size: 12px; 
-   font-weight: bold; /* Negrito para destacar */
-    margin-top: auto;  /* Garante que o rodapé fique no final */
+   font-weight: bold; 
+    margin-top: auto;  
 }
 
  html, body {   /*garante que a página tenha uma altura mínima igual à altura da janela,por isso que o rodape fica em baixo*/
@@ -145,8 +143,8 @@ nav a:hover {
 
 /* Remover sublinhado de qualquer link dentro de h2 */
 h2 a {
-   text-decoration: none; /* Remove sublinhado */
-   color: inherit; /* Usa a cor do título */
+   text-decoration: none; 
+   color: inherit; 
 }
 
 
@@ -154,27 +152,27 @@ img {
    display: block;
    margin-left: auto;
    margin-right: auto;
-   max-width: 100%; /* Para garantir que a imagem não ultrapasse o tamanho do container */
-   height: auto; /* Para manter a proporção da imagem */
+   max-width: 100%; 
+   height: auto; 
 }
 
  
 .visit-table {
    width: 100%;
    border-collapse: collapse;
-   background-color: #78c1ee; /* Fundo azul claro */
+   background-color: #78c1ee; 
    margin-top: 15px;
 }
 
 .visit-table th, .visit-table td {
-   border: 1px solid #add9ec; /* Bordas azuis claras */
+   border: 1px solid #add9ec;
    padding: 10px;
    text-align: left;
 }
 
 .visit-table th {
-   background-color: #79bad6; /* Cabeçalhos em azul claro */
-   color: #fff; /* Texto branco nos cabeçalhos */
+   background-color: #79bad6;
+   color: #fff;
 }
 
 .visit-table tr:nth-child(odd) td {
@@ -186,11 +184,6 @@ img {
 }
 
 
-
-
-.visit-table tr:nth-child(even) {
-   background-color: #e9f4fb; /* Alternância de linhas em azul claro */
-}
 
 
 
