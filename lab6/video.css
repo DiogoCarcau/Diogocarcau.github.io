@@ -42,6 +42,27 @@ body {
 }
 
 h1 {
-    font-size: 2.5rem;
+    font-size: 1rem;
     color: #ffffff;
+}
+
+header {
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #2b2d2e;
+    color: white;
+    justify-content: space-between;
+}
+
+header nav a {
+    font-size: 1em;
+    padding: 1em;
+    color: white; 
+    text-decoration: none; /* remover linha */
+}
+
+header nav a:hover {
+    color: rgb(73, 188, 230); /*mudar de cor por cima do nome */
 }
