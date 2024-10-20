@@ -117,96 +117,13 @@ h3 {
    color: black;
 }
 
+.image-container {
+   flex-direction: column; 
+}
+
 .image-container img {
-   max-width: 100%;
-   height: auto;
-   display: block;
-   margin: 10px auto; /* Centraliza a imagem */
-}
-
-/*  móveis */
-@media only screen and (max-width: 767px) {
-   .container {
-       width: 100%; 
-       padding: 5px; 
-   }
-
-   p, li, h2, h3 {
-       font-size: 14px; 
-       margin-left: 5px; 
-   }
-
-   .section {
-       padding: 5px;
-   }
-
-   .section h2 {
-       padding: 8px;
-       font-size: 1.2em;
-   }
-
-   .box {
-       font-size: 14px;
-       padding: 8px;
-   }
-
-   .image-container {
-       flex-direction: column;
-   }
-
-   .image-container img {
-       width: 100%; 
-   }
-
-   .visit-table {
-       font-size: 12px; 
-   }
-
-   /* Botão hambúrguer visível */
-   .menu-toggle {
-       display: block;
-       font-size: 20px; 
-   }
-}
-
-
-@media only screen and (min-width: 768px) and (max-width: 1023px) {
-   .nav-container {
-       display: flex;
-       justify-content: center;
-       flex-wrap: wrap;
-   }
-
-   nav a {
-       font-size: 14px;
-       padding: 10px 15px;
-   }
-
-   .container {
-       padding: 10px;
-   }
-
-   .image-container img {
-       width: 90%; 
-   }
-}
-
-
-
-.footer {
-   background-color: #000000; 
-   color: #ffffff; 
-   text-align: center; 
-   padding: 15px; 
-   font-size: 12px; 
-   font-weight: bold; 
-   margin-top: auto;  
-}
-
-/* Remover sublinhado de qualquer link dentro de h2 */
-h2 a {
-   text-decoration: none;
-   color: inherit;
+   width: 100%; 
+   margin-bottom: 10px;
 }
 
 
@@ -269,20 +186,62 @@ img {
    display: none;
 }
 
-/* Estilo para o container das imagens no header */
-.image-container {
-   display: flex;
-   justify-content: space-between;
-   padding: 10px;
-   box-sizing: border-box;
-   margin-bottom: 20px;
-}
-
 .image-container img {
    width: 32%; 
    border-radius: 5px;
 }
 
+
+
+/*  móveis */
+@media only screen and (max-width: 767px) {
+   .menu-toggle {
+      display: block; /* Mostrar o botão hambúrguer */
+  }
+
+  .nav-container {
+      display: none; 
+      flex-direction: column;
+      background-color: #222222;
+      padding: 0;
+      gap: 0;
+  }
+
+  /* Exibir navegação quando checkbox estiver marcado */
+  .menu-toggle-checkbox:checked + .menu-toggle + .nav-container {
+      display: flex;
+  }
+
+  
+  nav a {
+      padding: 15px;
+      text-align: center;
+      border-bottom: 1px solid #4daeea;
+  }
+
+ 
+  .image-container {
+      flex-direction: column; 
+  }
+
+  .image-container img {
+      width: 100%; 
+      margin-bottom: 10px;
+  }
+
+ 
+}
+
+
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+   .container {
+       padding: 10px;
+   }
+
+   .image-container img {
+       width: 90%; 
+   }
+}
 
 
 /* desktop */
