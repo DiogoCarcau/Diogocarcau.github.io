@@ -21,7 +21,7 @@ header div {
 }
 
 nav a {
-  padding: 10px; /* Reduzi o padding para não sobrepor */
+  padding: 10px; 
   text-decoration: none;
   color: #79bad6;
 }
@@ -51,7 +51,7 @@ article#images img {
 article#cidades  {
   display: grid;
   grid-template-columns: repeat(3,1fr);
-  gap: 15px; /*espaço entre as celulas*/
+  gap: 15px; 
   padding: 65px;
 }
 
@@ -99,7 +99,7 @@ header h2 {
   padding-left: 15px;
 }
 
-/* Estilo para o rodapé */
+/* rodapé */
 .footer {
   background-color: #000000; 
   color: #ffffff; 
@@ -107,7 +107,7 @@ header h2 {
   padding: 15px; 
   font-size: 12px; 
   font-weight: bold; /* Negrito para destacar */
-   margin-top: auto;  /* Garante que o rodapé fique no final */
+   margin-top: auto;  /*  rodapé no final */
 }
 
 img{
@@ -120,12 +120,13 @@ a:active { color: red; }
 
 /* Estilo para o efeito Parallax */
 .parallax {
-  position: relative;
-  background-image: url('images/parallax-image.jpg'); /* Substitua com o caminho da sua imagem */
   height: 500px;
+  background-image: url('images/atenas-719305414.jpg'); /* Insira o caminho da imagem aqui */
+  background-attachment: fixed; /* Fixa a imagem em uma posição para criar o efeito parallax */
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  position: relative;
   margin-top: 20px;
 }
 
@@ -135,11 +136,12 @@ a:active { color: red; }
   left: 50%;
   transform: translate(-50%, -50%);
   color: white;
-  font-size: 2rem;
+  font-size: 1rem;
   background-color: rgba(0, 0, 0, 0.5); /* Fundo semi-transparente para o texto */
   padding: 20px;
   border-radius: 10px;
 }
+
 
 p{
   margin-left: 10px;
