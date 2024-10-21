@@ -4,6 +4,24 @@
     padding: 0;
 }
 
+/* Animação com keyframes */
+@keyframes slideAndRotate {
+    0% {
+      transform: translateY(100px) rotate(0deg); /* Inicia fora da tela, sem rotação */
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0) rotate(360deg); /* Termina na posição original e gira 360 graus */
+      opacity: 1;
+    }
+  }
+  
+  /* Aplicar a animação ao título */
+  .title-container h1 {
+    animation: slideAndRotate 3s ease-in-out; 
+  }
+  
+
 body {
     background-color: #222222; 
     color: #ffffff; 
