@@ -192,13 +192,14 @@ h3{
   height: 200px;
   object-fit: cover;
   transition: transform 0.3s ease, opacity 0.3s ease;
-  border-radius: 15px;
+  border-radius: 20px;
+  width: calc(33.33% - 10px); /* Largura para três imagens lado a lado */
 }
 
 .galeria img:hover {
   transform: scale(1.1); /* Efeito de transformação */
   opacity: 0.8; /* Efeito de opacidade */
-  border-radius: 15px;
+  border-radius: 20px;
 }
 
 .galeria p {
