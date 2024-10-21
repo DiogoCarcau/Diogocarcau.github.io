@@ -174,6 +174,40 @@ h3{
   margin-left: 10px;
 }
 
+.galeria {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  padding: 20px;
+}
+
+.galeria section {
+  width: 300px;
+  text-align: center;
+}
+
+.galeria img {
+  width: 300px;
+  height: 200px;
+  object-fit: cover;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  border-radius: 15px;
+}
+
+.galeria img:hover {
+  transform: scale(1.1); /* Efeito de transformação */
+  opacity: 0.8; /* Efeito de opacidade */
+  border-radius: 15px;
+}
+
+.galeria p {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #333;
+}
+
+
 /*  mobile */
 @media  only screen and (max-width: 767px) {
 
