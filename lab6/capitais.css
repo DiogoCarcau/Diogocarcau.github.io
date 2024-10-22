@@ -176,7 +176,7 @@ h3{
 
 .galeria {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* 3 imagens por linha */
+  grid-template-columns: repeat(4, 1fr); /* 3 imagens por linha */
   gap: 10px;
   padding: 20px;
 }
@@ -201,6 +201,63 @@ h3{
   color: #333;
   text-align: center;
 }
+
+/* Galeria 2 - Rotação de 30 graus no hover */
+.galeria2 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 imagens por linha */
+  gap: 10px;
+  padding: 20px;
+}
+
+.galeria2 img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  transition: transform 0.8s ease, opacity 2.3s ease;
+  border-radius: 20px; /* Adiciona bordas arredondadas */
+}
+
+.galeria2 img:hover {
+  transform: rotate(30deg); /* Aplica rotação de 30 graus no hover */
+  opacity: 0.8; /* Efeito de opacidade */
+}
+
+.galeria2 p {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #333;
+  text-align: center;
+}
+
+/* Galeria 3 - Filtro aplicado no hover */
+.galeria3 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 imagens por linha */
+  gap: 10px;
+  padding: 20px;
+}
+
+.galeria3 img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  transition: transform 0.9s ease, opacity 2.3s ease;
+  border-radius: 20px; /* Adiciona bordas arredondadas */
+}
+
+.galeria3 img:hover {
+  opacity: 0.8; /* Efeito de opacidade */
+  filter: grayscale(80%) contrast(120%); /* Aplica um filtro no hover */
+}
+
+.galeria3 p {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #333;
+  text-align: center;
+}
+
 
 /*  mobile */
 @media  only screen and (max-width: 767px) {
