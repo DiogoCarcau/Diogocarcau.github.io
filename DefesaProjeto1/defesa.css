@@ -3,43 +3,109 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f3f3f3;
+    background-color: black;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
     height: 100vh;
+    justify-content: space-between;
 }
 
-.title-container {
-    background-color: #222222;
-    padding: 10px;
-    width: 100%;
+header {
+    background-color: rgb(64, 58, 58);
     text-align: center;
+    padding: 20px 0;
+}
+
+.title-container h1 {
     color: white;
-    font-size: 24px;
-}
-
-.presentation {
-    text-align: center;
-    margin-top: 5px;
-}
-
-h2 {
-    color: #222222;
     font-size: 28px;
-    margin-bottom: 10px;
+    margin: 0;
 }
 
-.poem {
-    font-size: 20px;
-    margin-bottom: 20px;
+.main-content {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.interfaces-web, .info-labs {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    width: 45%;
+}
+
+.interfaces-web {
+    text-align: center;
+}
+
+.interfaces-web h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
 }
 
 .poem p {
     margin: 5px 0;
+    font-size: 18px;
 }
 
 .word-cloud img {
-    border-radius: 10px;
+    margin-top: 10px;
+}
+
+.info-labs {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.introducao, .labs {
+    width: 45%;
+}
+
+.introducao h3, .labs h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.introducao ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.labs .lab-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.lab-buttons button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #c3c3c3;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.lab-buttons button:hover {
+    background-color: #79bad6;
+}
+
+.lab-buttons .disabled {
+    background-color: #dddddd;
+    cursor: not-allowed;
+}
+
+footer {
+    background-color: #c3c3c3;
+    text-align: center;
+    padding: 10px;
+}
+
+footer p {
+    margin: 0;
+    font-size: 14px;
+    color: black;
 }
