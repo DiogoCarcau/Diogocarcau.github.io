@@ -1,13 +1,11 @@
-
 body {
     font-family: Arial, Helvetica, sans-serif;
     margin: 0;
     padding: 0;
     background-color: black;
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
     height: 100vh;
-    justify-content: space-between;
 }
 
 header {
@@ -15,39 +13,24 @@ header {
     color: white;
     font-size: 28px;
     text-align: center;
-    margin-top: 20px;
-    padding: 20px 10; 
-    margin: 15px; 
+    margin: 15px;
+    padding: 20px;
     border-radius: 10px;
+    margin-left: 20px; 
 }
-
 
 .main-content {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    padding: 5px;
-    margin: 15px; 
+    display: grid;
+    grid-template-rows: auto 1fr;
+    gap: 20px;
+    padding: 15px;
+    margin: 15px;
 }
 
 .interfaces-web {
     background-color: #ffffff;
     padding: 20px;
     border-radius: 10px;
-    width: 80%;
-    padding: 5px;
-}
-
-.info-labs{
-    background-color: #ffffff;
-    padding: 20px;
-    border-radius: 10px;
-    width: 45%;
-    padding: 5px;
-    margin: 5px; 
-}
-
-.interfaces-web {
     text-align: center;
 }
 
@@ -65,30 +48,33 @@ header {
     margin-top: 10px;
 }
 
+.info-labs-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); 
+    gap: 20px;
+    width: 100%; 
+    max-width: 1200px; 
+    margin: 0 auto;
+}
+
 .info-labs {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.lab-buttons {
     display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
+    gap: 10px;
 }
 
-.introducao, .labs {
-    width: 45%;
-}
-
-.introducao h3, .labs h3 {
+.info-labs h3 {
     font-size: 20px;
     margin-bottom: 10px;
 }
 
 .introducao ul {
-    list-style-type: disc;
     padding-left: 20px;
-}
-
-.labs .lab-buttons {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
 }
 
 .lab-buttons button {
@@ -98,10 +84,6 @@ header {
     border: none;
     border-radius: 5px;
     cursor: pointer;
-}
-
-.lab-buttons button:hover {
-    background-color: #79bad6;
 }
 
 .lab-buttons .disabled {
