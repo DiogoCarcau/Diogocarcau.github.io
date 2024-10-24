@@ -44,9 +44,6 @@ header {
     font-size: 18px;
 }
 
-.word-cloud img {
-    margin-top: 10px;
-}
 
 .info-labs-container {
     display: grid;
@@ -63,33 +60,21 @@ header {
     border-radius: 10px;
 }
 
-.lab-buttons {
-    display: flex;
-    gap: 10px;
-}
-
 .info-labs h3 {
     font-size: 20px;
     margin-bottom: 10px;
 }
 
-.introducao ul {
-    padding-left: 20px;
-}
-
 .lab-buttons button {
     padding: 10px 20px;
     font-size: 16px;
+    margin: 5px;
     background-color: #c3c3c3;
     border: none;
     border-radius: 5px;
     cursor: pointer;
 }
 
-.lab-buttons .disabled {
-    background-color: #dddddd;
-    cursor: not-allowed;
-}
 
 footer {
     background-color: #c3c3c3;
