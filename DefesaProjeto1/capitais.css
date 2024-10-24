@@ -1,0 +1,337 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+header {
+  height: 10vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #2b2d2e;
+  color: white;
+  justify-content: space-between;
+}
+
+header div {
+  font-size: 2em;
+  padding: 1em;
+}
+
+nav a {
+  padding: 10px; 
+  text-decoration: none;
+  color: #79bad6;
+}
+
+article {
+  width: 100vw;
+  background: rgb(143, 236, 239);
+  font-weight: bold;
+  font-style: italic;
+  align-content: center;
+}
+
+article#poema {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+  text-align: center;
+}
+
+article#images img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+article#cidades  {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 15px; 
+  padding: 65px;
+}
+
+article#cidades section {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  }
+
+article#cidades section img {
+  min-width: 100px; 
+  max-width: 100px; 
+  min-height: 80px;
+  max-height: 80px;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  margin-right: 0; 
+}
+
+article#cidades section div {
+  text-align: center;
+  font-size: 1.2em;
+  background-color: aliceblue;
+  padding: 0 10px; /*  remove espaço lateral excessivo */
+  min-width: 100px; 
+  max-width: 100px; 
+  min-height: 80px;
+  max-height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+
+article:last-child {
+  height: 33vh;
+  width: 33vh;
+  background: black;
+  color: white;
+}
+
+header h2 {
+  padding-left: 15px;
+}
+
+/* rodapé */
+.footer {
+  background-color: #000000; 
+  color: #ffffff; 
+  text-align: center; 
+  padding: 15px; 
+  font-size: 12px; 
+  font-weight: bold; /* Negrito para destacar */
+   margin-top: auto;  
+}
+
+img{
+  position:relative;
+}
+a:link { color: purple; }
+a:visited { color: gray; }
+a:hover { color: white; }
+a:active { color: red; }
+
+/* Estilo para o efeito Parallax */
+.parallax {
+  height: 500px;
+  background-image: url('images/atenas-719305414.jpg'); 
+  background-attachment: fixed; /* Fixa a imagem em uma posição para criar o efeito parallax */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  margin-top: 20px;
+}
+
+.parallax-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /*centraliza o texto*/
+  color: white;
+  font-size: 1rem;
+  background-color: rgba(0, 0, 0, 0.5); 
+  padding: 20px;
+  border-radius: 10px;
+}
+
+
+p{
+  margin-left: 10px;
+}
+
+
+iframe{
+  margin-left: 10px;
+}
+
+/*  formulário */
+form {
+  padding: 20px;
+}
+
+
+h1 {
+  color: #f3f3f3; 
+  margin-left: 10px;
+}
+
+h2{
+  margin-left: 10px;
+}
+
+li{
+  margin-left: 10px;
+}
+h3{
+  margin-left: 10px;
+}
+
+.galeria {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 3 imagens por linha */
+  gap: 10px;
+  padding: 20px;
+}
+
+.galeria img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  transition: transform 0.7s ease, opacity 2.3s ease;
+  border-radius: 20px; /* Adiciona bordas arredondadas */
+}
+
+.galeria img:hover {
+  transform: scale(1.1); /* Efeito de transformação */
+  opacity: 0.8; /* Efeito de opacidade */
+}
+
+
+.galeria p {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #333;
+  text-align: center;
+}
+
+/* Galeria 2 - Rotação de 30 graus no hover */
+.galeria2 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 imagens por linha */
+  gap: 10px;
+  padding: 20px;
+}
+
+.galeria2 img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  transition: transform 0.8s ease, opacity 2.3s ease;
+  border-radius: 20px; /* Adiciona bordas arredondadas */
+}
+
+.galeria2 img:hover {
+  transform: rotate(30deg); /* Aplica rotação de 30 graus no hover */
+  opacity: 0.8; /* Efeito de opacidade */
+}
+
+.galeria2 p {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #333;
+  text-align: center;
+}
+
+/* Galeria 3 - Filtro aplicado no hover */
+.galeria3 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 imagens por linha */
+  gap: 10px;
+  padding: 20px;
+}
+
+.galeria3 img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  transition: transform 0.9s ease, opacity 2.3s ease;
+  border-radius: 20px; /* Adiciona bordas arredondadas */
+}
+
+.galeria3 img:hover {
+  opacity: 0.8; /* Efeito de opacidade */
+  filter: grayscale(80%) contrast(120%); /* Aplica um filtro no hover */
+}
+
+.galeria3 p {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #333;
+  text-align: center;
+}
+
+
+/*  mobile */
+@media  only screen and (max-width: 767px) {
+
+  /* Exibir botão hambúrguer */
+  .menu-toggle {
+      display: block; /* Mostrar o botão hambúrguer */
+  }
+
+ 
+  .nav-container {
+      display: none; 
+      flex-direction:column;
+      background-color: #222222;
+      padding: 0;
+      gap: 0;
+  }
+
+   .menu-toggle-checkbox:checked + .menu-toggle + .nav-container {
+      display: flex;
+  }
+
+
+ 
+  nav a {
+      padding: 15px;
+      text-align: center;
+      border-bottom: 1px solid #4daeea;
+  }
+
+
+  .image-container {
+      flex-direction: row; 
+  }
+
+  .image-container img {
+      width: 32%; 
+      margin-bottom: 10px;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  .nav-container {
+      display: flex;
+      justify-content: center; 
+      flex-wrap: wrap; /* Permite a quebra de linha se necessário */
+  }
+
+  nav a {
+      font-size: 14px; 
+      padding: 10px 15px; 
+  }
+}
+
+/* Estilos para desktop */
+@media only screen and (min-width: 1024px) and  (max-width: 2559px) {
+
+  .container {
+      max-width: 2559px; 
+      margin: 0 auto; 
+      padding: 0 15px; 
+  }
+ 
+  .image-container img {
+      width: 30%; 
+  }
+}
+
+@media only screen and (min-width: 2560px) {
+  /* Imagens ainda em linha, sem mudanças */
+  .image-container img {
+      width: 30%; 
+  }
+
+}
+
+
