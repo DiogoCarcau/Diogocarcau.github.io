@@ -1,15 +1,15 @@
-// Variáveis
+
 let counter = 0;
 
-// Função para alterar a cor de fundo
 function changeColor(color) {
-    document.body.style.backgroundColor = color;
+    // Seleciona o elemento com o id "colorText"
+    const colorText = document.getElementById("colorText");
+
+    // Altera a cor de fundo para a cor recebida no parâmetro
+    colorText.style.backgroundColor = color;
 }
 
-// Função para exibir uma mensagem ao passar o mouse
-document.getElementById('hoverZone').addEventListener('mouseover', () => {
-    alert("Passou o mouse aqui!");
-});
+
 
 // Função para incrementar o contador
 function incrementCounter() {

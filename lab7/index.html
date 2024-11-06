@@ -7,17 +7,20 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>Welcome to My Page</h1>
-    <p>Lorem Lorem Lorem</p>
+    <h1>Ola novamente, Voltei!</h1>
 
     <div>
-        <p>1. Passa por aqui!</p>
-        <div id="hoverZone">Passa o mouse aqui!</div>
+        <div 
+             onmouseover="this.textContent='Obrigado por pensares!'" 
+             onmouseout="this.textContent='Passa o mouse aqui!'">
+            Passa o mouse aqui!
+        </div>
 
-        <p>2. Pinta-me!</p>
-        <button onclick="changeColor('red')">Red</button>
-        <button onclick="changeColor('green')">Green</button>
-        <button onclick="changeColor('blue')">Blue</button>
+        <p id="colorText">Pinta-me!</p>
+        <button onclick="changeColor('Red')">Red</button>
+        <button onclick="changeColor('Green')">Green</button>
+        <button onclick="changeColor('Blue')">Blue</button>
+        
 
         <p>3. Experimenta escrever...</p>
         <input type="text" id="inputText" placeholder="Escreva algo...">
