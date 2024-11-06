@@ -1,14 +1,6 @@
-
-let counter = 0;
-
 function changeColor(color) {
-    // Seleciona o elemento com o id "colorText"
-    const colorText = document.getElementById("colorText");
-
-    // Altera a cor de fundo para a cor recebida no parâmetro
-    colorText.style.backgroundColor = color;
+    document.getElementById('paintText').style.color = color;
 }
-
 
 
 // Função para incrementar o contador
@@ -17,8 +9,15 @@ function incrementCounter() {
     document.getElementById('counter').textContent = counter;
 }
 
-// Função para submeter a cor inserida pelo usuário
+
 function submitColor() {
-    const color = document.getElementById('colorInput').value.toLowerCase();
-    changeColor(color);
+    const color = document.getElementById('colorInput').value; 
+    document.body.style.backgroundColor = color; // Altera a cor de fundo da página
+}
+
+// fundo da caixa com cor aleatória
+function mudaBackgroud3() {
+    const colors = ['#FF5733', '#33FF57', '#3357FF', '#F5A623', '#8E44AD', '#1ABC9C'];
+    const randomColor = colors[Math.floor(Math.random() * colors.length)]; 
+    document.getElementById('inputText').style.backgroundColor = randomColor;
 }

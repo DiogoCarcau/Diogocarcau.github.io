@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Example</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="main.js"></script>
 </head>
 <body>
     <h1>Ola novamente, Voltei!</h1>
@@ -16,22 +17,27 @@
             Passa o mouse aqui!
         </div>
 
-        <p id="colorText">Pinta-me!</p>
-        <button onclick="changeColor('Red')">Red</button>
-        <button onclick="changeColor('Green')">Green</button>
-        <button onclick="changeColor('Blue')">Blue</button>
-        
+        <p id="paintText">Pinta-me!</p>
+     <button onclick="changeColor('Red')">Red</button>
+     <button onclick="changeColor('Green')">Green</button>
+      <button onclick="changeColor('Blue')">Blue</button>
 
-        <p>3. Experimenta escrever...</p>
-        <input type="text" id="inputText" placeholder="Escreva algo...">
+      <p>Experimenta escrever...</p>
+      <input type="text" id="inputText" placeholder="Escreva algo..." oninput="mudaBackgroud3()">
 
-        <p>4. Escolha uma cor em inglês:</p>
-        <input type="text" id="colorInput" placeholder="Cor (em inglês)">
-        <button onclick="submitColor()">submeter</button>
+      <p>4. Escolha uma cor em inglês:</p>
+      <input type="text" id="colorInput" placeholder="Cor (em inglês)">
+      <button onclick="submitColor()">submeter</button>
 
         <p>5. <button onclick="incrementCounter()">Conta!</button> <span id="counter">0</span></p>
     </div>
 
-    <script src="scripts/main.js"></script>
+    <script>
+        // Função para mudar a cor do texto de <p id="paintText">
+        function changeColor(color) {
+            document.getElementById('paintText').style.color = color;
+        }
+    </script>
+
 </body>
 </html>
