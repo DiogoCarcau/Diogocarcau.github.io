@@ -23,21 +23,17 @@
       <button onclick="changeColor('Blue')">Blue</button>
 
       <p>Experimenta escrever...</p>
-      <input type="text" id="inputText" placeholder="Escreva algo..." oninput="mudaBackgroud3()">
+      <input type="text" id="inputText" placeholder="Escreva algo..." oninput="mudaFundoCaixa()">
 
-      <p>4. Escolha uma cor em inglês:</p>
+      <p> Escolha uma cor em inglês:</p>
       <input type="text" id="colorInput" placeholder="Cor (em inglês)">
-      <button onclick="submitColor()">submeter</button>
+      <button onclick="mudaFundo()">submeter</button>
 
-        <p>5. <button onclick="incrementCounter()">Conta!</button> <span id="counter">0</span></p>
+        <p> <button onclick="count()">Conta!</button> 
+            <span id="counter">0</span></p>
     </div>
 
-    <script>
-        // Função para mudar a cor do texto de <p id="paintText">
-        function changeColor(color) {
-            document.getElementById('paintText').style.color = color;
-        }
-    </script>
+   
 
 </body>
 </html>
