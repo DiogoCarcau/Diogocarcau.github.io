@@ -1,16 +1,16 @@
 function changeColor(color) {
-    document.getElementById('paintText').style.color = color;
+    document.querySelector('#paintText').style.color = color;
 }
 
 let counter = 0;
 
 function count(){
     counter++;
-    document.getElementById("counter").textContent = counter;
+    document.querySelector("#counter").textContent = counter;
 }
 
 function cimaDaFrase(){
-    const mouse=document.getElementById("mouse");
+    const mouse=document.querySelector("#mouse");
 
     mouse.addEventListener("mouseover", function(){
         mouse.textContent="Obrigado por passares!";
@@ -22,7 +22,7 @@ function cimaDaFrase(){
 
 
 function mudaFundo() {
-    const color = document.getElementById('colorInput').value; 
+    const color = document.querySelector('#colorInput').value; 
     document.body.style.backgroundColor = color; 7
 }
 
@@ -30,5 +30,5 @@ function mudaFundo() {
 function mudaFundoCaixa() {
     const colors = ['#FF5733', '#33FF57', '#2257FF', '#F5A623', '#8E44AD', '#1ABC9C'];
     const randomColor = colors[Math.floor(Math.random() * colors.length)]; 
-    document.getElementById('inputText').style.backgroundColor = randomColor;
+    document.querySelector('#inputText').style.backgroundColor = randomColor;
 }
