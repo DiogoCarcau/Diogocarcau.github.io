@@ -27,18 +27,6 @@ function cimaDaFrase() {
     });
 }
 
-// Função para mudar o fundo da página
-function mudaFundo() {
-    const color = getElement('#colorInput').value;
-    document.body.style.backgroundColor = color;
-}
-
-// Função para mudar o fundo de uma caixa de texto com cor aleatória
-function mudaFundoCaixa() {
-    const colors = ['#FF5733', '#33FF57', '#2257FF', '#F5A623', '#8E44AD', '#1ABC9C'];
-    const randomColor = colors[Math.floor(Math.random() * colors.length)];
-    getElement('#inputText').style.backgroundColor = randomColor;
-}
 
 // Elementos principais do jogo
 const gameArea = getElement("#gameArea");
@@ -50,57 +38,63 @@ let score = 0;
 let time = 30;
 let gameInterval;
 let fruitInterval;
+let bombaInterval;
 
-// Função para criar e exibir uma fruta na área de jogo
+
 function spawnFruit() {
     const fruit = document.createElement("div");
-    const bomba = document.createElement("div");
     fruit.classList.add("fruit");
     fruit.textContent = "🍎";
-    bomba.classList.add("bomba");
-    bomba.textContent = "💣";
     fruit.style.left = Math.random() * (gameArea.offsetWidth - 50) + "px";
     fruit.style.top = Math.random() * (gameArea.offsetHeight - 50) + "px";
     fruit.style.fontSize = Math.floor(Math.random() * 20 + 30) + "px";
-     bomba.style.left = Math.random() * (gameArea.offsetWidth - 50) + "px";
-    bomba.style.top = Math.random() * (gameArea.offsetHeight - 50) + "px";
-    bomba.style.fontSize = Math.floor(Math.random() * 20 + 30) + "px";
 
 
-    // Evento para coletar a fruta ao clicar
+    
     fruit.addEventListener("click", () => {
         score += 1; 
         scoreDisplay.textContent = score;
         fruit.remove(); 
     });
 
+   
+    gameArea.appendChild(fruit);
     
+}
+
+function spawnBomba() {
+    const bomba = document.createElement("div");
+    bomba.classList.add("bomba");
+    bomba.textContent = "💣";
+    bomba.style.left = Math.random() * (gameArea.offsetWidth) + "px";
+    bomba.style.top = Math.random() * (gameArea.offsetHeight ) + "px";
+    bomba.style.fontSize = Math.floor(Math.random() * 15 + 25) + "px";
+
     bomba.addEventListener("click", () => {
-        score -= 5; 
+        score -= 2; 
         scoreDisplay.textContent = score;
         bomba.remove(); 
     });
 
-    // Adiciona a fruta na área de jogo
-    gameArea.appendChild(fruit);
     gameArea.appendChild(bomba);
+
 }
 
-// Função para iniciar o jogo
+
 function startGame() {
-    score = 0;  // Zera a pontuação no início do jogo
-    time = 30;  // Reseta o tempo
+    score = 0;  
+    time = 30;  
     scoreDisplay.textContent = score;
     timeDisplay.textContent = time;
     
-    // Limpa apenas a área de frutas e bombas
+    
 const items = gameArea.querySelectorAll('.fruit, .bomba');
 items.forEach(item => item.remove());
 
 
-    startButton.disabled = true; // Desativa o botão iniciar
+    startButton.disabled = true; 
 
-    // Intervalo para o cronômetro do jogo
+    //  cronômetro
     gameInterval = setInterval(() => {
         time--;
         timeDisplay.textContent = time;
@@ -108,13 +102,15 @@ items.forEach(item => item.remove());
         if (time <= 0) {
             clearInterval(gameInterval);
             clearInterval(fruitInterval);
+            clearInterval(bombaInterval);
             alert("Fim de Jogo! Pontuação Final: " + score);
-            startButton.disabled = false; // Reativa o botão iniciar
+            startButton.disabled = false; 
         }
     }, 1000);
 
-    // Intervalo para spawn de frutas
-    fruitInterval = setInterval(spawnFruit, 1000); // Frutas aparecem a cada 1 segundo
+    
+    fruitInterval = setInterval(spawnFruit, 1000); 
+    fruitInterval = setInterval(spawnBomba, 1000);
 }
 
 // Evento para iniciar o jogo
