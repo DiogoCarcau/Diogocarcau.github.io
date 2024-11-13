@@ -7,42 +7,33 @@
     <link rel="stylesheet" href="styles.css">
     <script src="main.js"></script>
 </head>
-
-
 <body>
     <header>
         <nav class="nav-container">
             <a href="index.html">Home</a>
             <a href="eventos.html">Eventos</a>
-            
         </nav>
     </header>
     
     <h1>Ola novamente, Voltei!</h1>
 
-
     <div id="mouse" onmouseover="cimaDaFrase()">Passa o mouse aqui!</div>
 
-        
-        
+    <p id="paintText">Pinta-me!</p>
+    <button onclick="changeColor('Red')">Red</button>
+    <button onclick="changeColor('Green')">Green</button>
+    <button onclick="changeColor('Blue')">Blue</button>
 
-        <p id="paintText">Pinta-me!</p>
-     <button onclick="changeColor('Red')">Red</button>
-     <button onclick="changeColor('Green')">Green</button>
-      <button onclick="changeColor('Blue')">Blue</button>
+    <p>Experimenta escrever...</p>
+    <input type="text" id="inputText" placeholder="Escreva algo..." oninput="mudaFundoCaixa()">
 
-      <p>Experimenta escrever...</p>
-      <input type="text" id="inputText" placeholder="Escreva algo..." oninput="mudaFundoCaixa()">
+    <p>Escolha uma cor em inglês:</p>
+    <input type="text" id="colorInput" placeholder="Cor (em inglês)">
+    <button onclick="mudaFundo()">submeter</button>
 
-      <p> Escolha uma cor em inglês:</p>
-      <input type="text" id="colorInput" placeholder="Cor (em inglês)">
-      <button onclick="mudaFundo()">submeter</button>
-
-        <p> <button onclick="count()">Conta!</button> 
-            <span id="counter">0</span></p>
-    </div>
-
-   
-
+    <p>
+        <button onclick="count()">Conta!</button> 
+        <span id="counter">0</span>
+    </p>
 </body>
 </html>

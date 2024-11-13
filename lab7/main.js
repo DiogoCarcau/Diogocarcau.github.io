@@ -27,6 +27,19 @@ function cimaDaFrase() {
     });
 }
 
+// Função para mudar o fundo da página
+function mudaFundo() {
+    const color = getElement('#colorInput').value;
+    document.body.style.backgroundColor = color;
+}
+
+// Função para mudar o fundo de uma caixa de texto com cor aleatória
+function mudaFundoCaixa() {
+    const colors = ['#FF5733', '#33FF57', '#2257FF', '#F5A623', '#8E44AD', '#1ABC9C'];
+    const randomColor = colors[Math.floor(Math.random() * colors.length)];
+    getElement('#inputText').style.backgroundColor = randomColor;
+}
+
 
 // Elementos principais do jogo
 const gameArea = getElement("#gameArea");
