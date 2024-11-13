@@ -2,6 +2,30 @@ body {
     font-family: Arial, sans-serif;
     background-color: #f0f0f0;
 }
+.nav-container {
+    background-color: #222222; 
+    padding: 6px;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+   gap: 10px;
+}
+
+nav a {
+    padding: 10px 25px;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+
+nav a:hover {
+    background-color: #4daeea; 
+    color: #ffffff;
+    border-radius: 10px;
+}
 
 #hoverZone {
     padding: 10px;
