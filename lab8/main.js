@@ -1,16 +1,20 @@
-// Função para alterar a cor do texto
-function changeColor(color) {
-    document.getElementById('paintText').style.color = color;
-}
 
-// Função para incrementar o contador
+document.querySelectorAll("button[data-color]").forEach((button) => { //tem que ser button[dara-color] e nao #color
+    button.addEventListener("click", () => {
+       
+        const color = button.dataset.color;
+        document.getElementById("color").style.color = color;
+    });
+});
+
+
 let counter = 0;
 function count() {
     counter++;
     document.getElementById("counter").textContent = counter;
 }
 
-// Função para adicionar eventos de mouse sobre um texto
+
 function cimaDaFrase() {
     const mouse = document.getElementById("mouse");
 
@@ -21,21 +25,51 @@ function cimaDaFrase() {
         mouse.textContent = "Passa o mouse aqui!";
     });
 }
+cimaDaFrase();
 
-// Função para mudar o fundo da página
-function mudaFundo() {
-    const color = document.getElementById('colorInput').value;
-    document.body.style.backgroundColor = color;
-}
 
-// Função para mudar o fundo de uma caixa de texto com cor aleatória
+
+document.querySelector('#colorSelector').onchange = function() {
+    document.body.style.backgroundColor = this.value;
+};
+
+
+
+
+
 function mudaFundoCaixa() {
     const colors = ['#FF5733', '#33FF57', '#2257FF', '#F5A623', '#8E44AD', '#1ABC9C'];
     const randomColor = colors[Math.floor(Math.random() * colors.length)];
     document.getElementById('inputText').style.backgroundColor = randomColor;
 }
 
-// Seleciona elementos do jogo usando getElementById
+
+
+document.querySelector('#nomeIdade').onsubmit= (e) => {
+    e.preventDefault(); //formulario vazio!
+    const nome = document.getElementById('nameInput').value;
+    const idade = document.getElementById('ageInput').value;
+    document.getElementById('mensagem').textContent = `Olá, o ${nome} tem ${idade}!`;
+
+} 
+
+
+
+
+
+// Contador automático
+let autoCount = 0;
+setInterval(() => {
+    autoCount++;
+    document.getElementById('autoCounter').innerText = autoCount;
+}, 1000);
+
+
+
+
+
+
+// Jogo
 const gameArea = document.getElementById("gameArea");
 const scoreDisplay = document.getElementById("score");
 const timeDisplay = document.getElementById("time");
@@ -114,7 +148,7 @@ function startGame() {
     }, 1000);
 }
 
-// Função para finalizar o jogo e exibir a pontuação
+
 function endGame() {
     startButton.disabled = false;
     alert("Fim de Jogo! Pontuação Final: " + score);

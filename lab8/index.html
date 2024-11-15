@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Example</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav class="nav-container">
+            <a href="index.html">Home</a>
+            <a href="eventos.html">Eventos</a>
+            <a href="/index.html">Pagina inicial!</a>
+        </nav>
+    </header>
+    
+    <h1>Ola novamente, Voltei!</h1>
+
+    <div id="mouse">1. Passa o mouse aqui!</div>
+
+    <p id="color">2. Pinta-me!
+    <button data-color="Red">Red</button>
+    <button data-color="Green">Green</button>
+    <button data-color="Blue">Blue</button>
+    </p>
+
+    <p>3. Experimenta escrever...  
+        <input type="text" id="inputText" placeholder="Escreva algo..." oninput="mudaFundoCaixa()">
+    </p>
+
+    <p>4. Escolha uma cor: 
+        <select id="colorSelector">
+            <option value="White">White</option>
+            <option value="Red">Red</option>
+            <option value="Blue">Blue</option>
+        </select>
+    </p>
+    
+
+    <p>
+        <button onclick="count()">5. Conta!</button> 
+        <span id="counter">0</span>
+    </p>
+
+    <p>6
+        <form id="nomeIdade">
+            <input type="text" id="nameInput" placeholder="Insira seu nome" required>
+            <input type="number" id="ageInput" placeholder="Insira sua idade" required>
+            <button type="submit">Submeter</button>
+        </form>
+        <p id="mensagem"></p>
+    </p>
+    
+
+    <p>7. Automatic Counter: <span id="autoCounter">0</span></p>
+
+    <script src="main.js"></script>
+
+</body>
+</html>
