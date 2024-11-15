@@ -56,14 +56,17 @@ document.querySelector('#nomeIdade').onsubmit= (e) => {
 
 
 
+if (!localStorage.getItem('autoCounter')) {
+    localStorage.setItem('autoCounter', '0');
+}
 
-// Contador automático
-let autoCount = 0;
+let contador = parseInt(localStorage.getItem('autoCounter'));
+
 setInterval(() => {
-    autoCount++;
-    document.getElementById('autoCounter').innerText = autoCount;
+    contador++;
+    document.getElementById('autoCounter').innerText = contador;
+    localStorage.setItem('autoCounter', contador.toString());
 }, 1000);
-
 
 
 
