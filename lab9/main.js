@@ -1,12 +1,5 @@
-// Inicializar produtos-selecionados no localStorage se não existir
-if (!localStorage.getItem('produtos-selecionados')) {
-    localStorage.setItem('produtos-selecionados', JSON.stringify([]));
-}
-
-document.addEventListener('DOMContentLoaded', () => {
-    carregarProdutos(produtos);
+carregarProdutos(produtos);
     atualizaCesto();
-});
 
 function carregarProdutos(produtos) {
     const listaProdutos = document.getElementById('lista-produtos');
@@ -35,7 +28,7 @@ function criarProduto(produto) {
     preco.textContent = `€${produto.price.toFixed(2)}`;
 
     const botaoAdicionar = document.createElement('button');
-    botaoAdicionar.textContent = '+ Adicionar ao Cesto';
+    botaoAdicionar.textContent = '+ Adiciona ao Cesto';
     
     botaoAdicionar.addEventListener('click', () => {
         const produtosSelecionados = JSON.parse(localStorage.getItem('produtos-selecionados'));
@@ -48,6 +41,7 @@ function criarProduto(produto) {
     
     return artigo;
 }
+
 
 function atualizaCesto() {
     const cestaElemento = document.getElementById('produtos-cesto');
@@ -65,6 +59,7 @@ function atualizaCesto() {
     const precoTotalElemento = document.getElementById('preco-total');
     precoTotalElemento.textContent = `Total: €${precoTotal.toFixed(2)}`;
 }
+
 
 function criaProdutoCesto(produto) {
     const artigo = document.createElement('article');

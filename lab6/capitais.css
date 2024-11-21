@@ -99,14 +99,14 @@ header h2 {
   padding-left: 15px;
 }
 
-/* rodapé */
+
 .footer {
   background-color: #000000; 
   color: #ffffff; 
   text-align: center; 
   padding: 15px; 
   font-size: 12px; 
-  font-weight: bold; /* Negrito para destacar */
+  font-weight: bold; 
    margin-top: auto;  
 }
 
