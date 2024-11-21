@@ -2,8 +2,15 @@ body {
     font-family: Arial, sans-serif;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 20px;
-}
+    padding: 10px;
+    background-color: #6dbdda;}
+
+    html, body {
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+    }
+    
 
 main {
     display: grid;
@@ -57,3 +64,16 @@ button {
 .produto-cesto button {
     background-color: #f44336;
 }
+
+footer {
+    background-color: #0c0c0c;
+    color: #fff;
+    text-align: center;
+    padding: 5px;
+    margin: 0; 
+    width: 100vw; /* Faz o footer ocupar 100% da largura da viewport */
+    position: relative; 
+    left: 0;
+}
+
+
