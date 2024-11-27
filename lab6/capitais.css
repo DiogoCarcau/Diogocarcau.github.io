@@ -233,7 +233,7 @@ h3{
 /* Galeria 3 - Filtro aplicado no hover */
 .galeria3 {
   display: grid;
-  grid-template-columns: repeat(4, 1fr); /* 4 imagens por linha */
+  grid-template-columns: repeat(3, 1fr); 
   gap: 10px;
   padding: 20px;
 }
