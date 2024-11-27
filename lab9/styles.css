@@ -6,7 +6,7 @@
 
 body {
   font-family: Arial, sans-serif;
-  background-color: #f0f4f8;
+  background-color: #ffffff;
   display: flex;
   flex-direction: column;
   padding-top: 80px;
@@ -16,7 +16,7 @@ header {
   position: fixed;
   top: 0;
   width: 100%;
-  background-color: #2c3e50;
+  background-color: #980fe8;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -25,19 +25,15 @@ header {
 }
 
 header a {
-  color: #ecf0f1;
+  color: #ffffff;
   text-decoration: none;
 }
 
 header nav a {
-  color: #3498db;
+  color: #07eeee;
   margin: 0 10px;
   font-weight: bold;
   transition: color 0.3s;
-}
-
-header nav a:hover {
-  color: #2980b9;
 }
 
 .pCont {
@@ -57,7 +53,7 @@ header nav a:hover {
   text-align: center;
   width: 300px;
   margin: 0 auto; /* Centraliza o produto */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 6px rgba(87, 3, 38, 0.1);
   transition: transform 0.2s ease-in-out;
 }
 
@@ -97,14 +93,14 @@ header nav a:hover {
 }
 
 .preco {
-  color: #27ae60;
+  color: #13549f;
   font-weight: bold;
   font-size: 18px;
 }
 
 .pCont button {
-  background-color: #3498db;
-  color: white;
+  background-color: #980fe8;
+  color: rgb(255, 247, 252);
   border: none;
   padding: 10px 15px;
   border-radius: 5px;
@@ -113,11 +109,11 @@ header nav a:hover {
 }
 
 .pCont button:hover {
-  background-color: #2980b9;
+  background-color: #14bfc5;
 }
 
 footer {
-  background-color: #2c3e50;
+  background-color: #000000;
   color: white;
   text-align: center;
   padding: 20px;
@@ -125,31 +121,30 @@ footer {
 }
 
 .descricao {
-  background-color: #f8f9fa;
+  background-color: #69727b;
   padding: 15px;
   border-radius: 5px;
   margin-bottom: 15px;
   text-align: left;
   font-size: 14px;
-  color: #6c757d;
+  margin-top: 15px;
+  color: #000000;
 }
 
 .preco {
   font-size: 18px;
   font-weight: bold;
   margin-bottom: 10px;
-  color: #000;
+  color: #530969;
 }
 
 .avaliacoes {
   font-size: 14px;
-  color: #6c757d;
+  color: #530969;
   margin-bottom: 15px;
 }
 
-.avaliacoes .estrela {
-  color: #ffc107;
-}
+
 
 .adicionar-cesto {
   background-color: #d1e7dd;
