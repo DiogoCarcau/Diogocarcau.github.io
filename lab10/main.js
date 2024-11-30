@@ -212,7 +212,7 @@ function carregarCarrinho() {
 
     if (carrinho.length > 0) {
         const carrinhoContainer = document.createElement('section');
-        carrinhoContainer.classList.add('pCont');
+        carrinhoContainer.classList.add('produtosCount');
 
         let total = 0;
 
