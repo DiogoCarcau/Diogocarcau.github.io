@@ -6,27 +6,59 @@
     <title>Diogo EuroShop</title>
     <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
     <header>
-      <h1>Diogo Euroshop</h1>
-      <nav>
-        <ul>
-          <a href="#produtos">Produtos</a>
-          <a href="#carrinho">Carrinho</a>
-        </ul>
-      </nav>
+        <h1>Diogo Euroshop</h1>
+        <nav>
+            <ul>
+                <li><a href="#produtos">Produtos</a></li>
+                <li><a href="#carrinho">Carrinho</a></li>
+            </ul>
+        </nav>
     </header>
-    <main>
-      <h2>Selecione os seus Produtos</h2>
-      <section id="produtos" class="pCount"></section>
-      <section id="carrinho"></section>
-    </main>
-    
 
-   
+    <main>
+        <section id="filtros">
+            <div class="filtro-produtos">
+              <div class="filtro">
+                <label for="filtrarPor">Filtrar por:</label>
+                <select id="filtrarPor">
+                  <option value="">Todas as categorias</option>
+                  <option value="categoria1">Categoria 1</option>
+                  <option value="categoria2">Categoria 2</option>
+                  <option value="categoria3">Categoria 3</option>
+                </select>
+              </div>
+              <div class="filtro">
+                <label for="ordenarPor">Ordenar por:</label>
+                <select id="ordenarPor">
+                  <option value="">Sem ordenação</option>
+                  <option value="preco-asc">Preço (Crescente)</option>
+                  <option value="preco-desc">Preço (Decrescente)</option>
+                </select>
+              </div>
+              <div class="filtro">
+                <label for="pesquisar">Pesquisar:</label>
+                <input type="text" id="pesquisar" placeholder="Nome do produto">
+              </div>
+            </div>
+          </section>
+
+        <h2>Selecione os seus Produtos</h2>
+        
+        <div class="produtos-container">
+            <section class="produtos"></section>
+            
+            <section id="carrinho">
+                <h2>Carrinho</h2>
+                <div class="produtos-cesto"></div>
+                <p id="custo-total">Custo total: 0.00 €</p>
+            </section>
+        </div>
+    </main>
+
     <footer class="footer">
-        <p>2024 Diogo Euroshop,2024</p>
+        <p>© 2024 Diogo Euroshop</p>
     </footer>
 
     <script src="main.js"></script>
