@@ -32,14 +32,22 @@ function fetchProdutos() {
     });
 }
 
-// Carrega os produtos no DOM
 function carregarProdutos(produtos) {
-  const produtosContainer = document.querySelector('.produtos');
-  produtosContainer.innerHTML = ''; // Limpa o container antes de carregar
+  const container = document.querySelector('.produtos');
+  container.innerHTML = '';
   produtos.forEach(produto => {
-    produtosContainer.appendChild(criarProduto(produto));
+    const card = document.createElement('div');
+    card.classList.add('produto-card');
+    card.innerHTML = `
+      <img src="${produto.image}" alt="${produto.title}">
+      <h3>${produto.title}</h3>
+      <p class="preco">${produto.price.toFixed(2)} €</p>
+      <button onclick="adicionarAoCesto(${produto.id})">+ Adicionar ao Cesto</button>
+    `;
+    container.appendChild(card);
   });
 }
+
 
 // Cria os elementos HTML para cada produto
 function criarProduto(produto) {
@@ -153,37 +161,65 @@ function restaurarCarinho() {
 
 // Filtra produtos por categoria
 function filtroCategoria() {
-  const categoria = document.getElementById('categoria-select').value;
+  const categoria = document.getElementById('filtrarPor').value;
   const produtosFiltrados = categoria 
-    ? allProducts.filter(p => p.category === parseInt(categoria))
+    ? allProducts.filter(p => p.category === categoria)
     : allProducts;
   carregarProdutos(produtosFiltrados);
 }
 
 // Ordena produtos por preço
 function ordenarPorPreço() {
-  const ordem = document.getElementById('ordem-select').value;
+  const ordem = document.getElementById('ordenarPor').value;
   let sortedProducts = [...allProducts];
   
-  if (ordem === 'asc') {
+  if (ordem === 'preco-asc') {
     sortedProducts.sort((a, b) => a.price - b.price);
-  } else if (ordem === 'desc') {
+  } else if (ordem === 'preco-desc') {
     sortedProducts.sort((a, b) => b.price - a.price);
   }
   
   carregarProdutos(sortedProducts);
 }
 
-// Ordena produtos por nome
-function ordenarPorNome() {
-  const termoPesquisa = document.getElementById('pesquisa-input').value.toLowerCase();
+// Pesquisa de produtos por nome
+function pesquisarProdutos() {
+  const termoPesquisa = document.getElementById('pesquisar').value.toLowerCase();
   const produtosFiltrados = allProducts.filter(produto => 
     produto.title.toLowerCase().includes(termoPesquisa)
   );  
   carregarProdutos(produtosFiltrados);
 }
 
-// Eventos de filtro e ordenação
-document.getElementById('categoria-select')?.addEventListener('change', filtroCategoria);
-document.getElementById('ordem-select')?.addEventListener('change', ordenarPorPreço);
-document.getElementById('pesquisa-input')?.addEventListener('input', ordenarPorNome);
+// Função para processar pagamento
+function processaPagamento() {
+  const produtosIds = selectedProducts.map(produto => produto.id);
+  const dadosDesconto = {
+    products: produtosIds,
+    student: document.getElementById('estudante-checkbox').checked,
+    coupon: document.getElementById('desconto-cupao').value,
+  };
+
+  fetch('https://deisishop.pythonanywhere.com/buy/', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(dadosDesconto),
+  })
+  .then(response => response.json())
+  .then(dados => {
+    document.getElementById('precofinal').textContent = `Valor final a pagar (com eventuais descontos): ${dados.totalCost} €`;
+    document.getElementById('referencia').textContent = `Referência de pagamento: ${dados.reference}`;
+  })
+  .catch(error => {
+    console.error('Erro:', error);
+    document.getElementById('precofinal').textContent = `Erro na compra: ${error.message}`;
+    document.getElementById('referencia').textContent = '';
+  });
+}
+
+// Adiciona event listeners para filtros e pesquisa
+document.getElementById('filtrarPor')?.addEventListener('change', filtroCategoria);
+document.getElementById('ordenarPor')?.addEventListener('change', ordenarPorPreço);
+document.getElementById('pesquisar')?.addEventListener('input', pesquisarProdutos);
