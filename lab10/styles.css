@@ -268,13 +268,13 @@ section {
 
 
 
-@media (max-width: 768px) {
+@media (max-width: 1200px) {
   .produtos {
       grid-template-columns: repeat(2, 1fr);
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 768px) {
   .produtos {
       grid-template-columns: 1fr;
   }
