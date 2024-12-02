@@ -32,22 +32,14 @@ function fetchProdutos() {
     });
 }
 
+// Carrega os produtos no DOM
 function carregarProdutos(produtos) {
-  const container = document.querySelector('.produtos');
-  container.innerHTML = '';
+  const produtosContainer = document.querySelector('.produtos');
+  produtosContainer.innerHTML = ''; // Limpa o container antes de carregar
   produtos.forEach(produto => {
-    const card = document.createElement('div');
-    card.classList.add('produto-card');
-    card.innerHTML = `
-      <img src="${produto.image}" alt="${produto.title}">
-      <h3>${produto.title}</h3>
-      <p class="preco">${produto.price.toFixed(2)} €</p>
-      <button onclick="adicionarAoCesto(${produto.id})">+ Adicionar ao Cesto</button>
-    `;
-    container.appendChild(card);
+    produtosContainer.appendChild(criarProduto(produto));
   });
 }
-
 
 // Cria os elementos HTML para cada produto
 function criarProduto(produto) {
