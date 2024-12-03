@@ -24,6 +24,7 @@ function fetchProdutos() {
       return response.json(); // Converte para JSON
     })
     .then(produtos => {
+      console.log('Produtos obtidos da API:', produtos); // Log para depuração
       allProducts = produtos; // Atualiza a lista global
       carregarProdutos(produtos); // Carrega os produtos no DOM
     })
@@ -34,6 +35,11 @@ function fetchProdutos() {
 
 // Carrega os produtos no DOM
 function carregarProdutos(produtos) {
+  if (!produtos || produtos.length === 0) {
+    console.log('Nenhum produto encontrado');
+    return;
+  }
+
   const produtosContainer = document.querySelector('.produtos');
   produtosContainer.innerHTML = ''; // Limpa o container antes de carregar
   produtos.forEach(produto => {
@@ -55,7 +61,7 @@ function criarProduto(produto) {
 
   const preco = document.createElement('p');
   preco.className = 'preco';
-  preco.textContent = `${produto.price.toFixed(2)} €`;
+  preco.textContent = `${parseFloat(produto.price).toFixed(2)} €`; // Garante que o preço está formatado
 
   const descricao = document.createElement('p');
   descricao.className = 'descricao';
@@ -93,13 +99,11 @@ function atualizarProdutoNoCesto(produto) {
   const itemCesto = document.createElement('article');
   itemCesto.className = 'produto-card';
 
-  // Adiciona a imagem
   const imagem = document.createElement('img');
   imagem.src = produto.image;
   imagem.alt = produto.title;
   imagem.className = 'produto-imagem';
 
-  // Configura o conteúdo do item
   const titulo = document.createElement('h3');
   titulo.textContent = produto.title;
 
@@ -110,16 +114,13 @@ function atualizarProdutoNoCesto(produto) {
   removerBtn.textContent = 'Remover do Cesto';
   removerBtn.className = 'remover-btn';
 
-  // Adiciona funcionalidade ao botão
   removerBtn.addEventListener('click', () => removerDoCesto(produto, itemCesto));
 
-  // Monta o item no contêiner
-  itemCesto.appendChild(imagem); // Adiciona a imagem
+  itemCesto.appendChild(imagem);
   itemCesto.appendChild(titulo);
   itemCesto.appendChild(preco);
   itemCesto.appendChild(removerBtn);
 
-  // Adiciona o item ao cesto
   cestoContainer.appendChild(itemCesto);
 }
 
@@ -139,7 +140,7 @@ function removerDoCesto(produto, elementoCesto) {
 // Atualiza o custo total do cesto
 function updateDinheiro() {
   selectedProducts = JSON.parse(localStorage.getItem('produtos-selecionados')) || [];
-  const custoTotal = selectedProducts.reduce((total, produto) => total + produto.price, 0);
+  const custoTotal = selectedProducts.reduce((total, produto) => total + parseFloat(produto.price), 0);
   document.getElementById('custo-total').textContent = `Custo total: ${custoTotal.toFixed(2)} €`;
 }
 
@@ -157,6 +158,7 @@ function filtroCategoria() {
   const produtosFiltrados = categoria 
     ? allProducts.filter(p => p.category === categoria)
     : allProducts;
+  console.log('Produtos filtrados:', produtosFiltrados); // Log para verificar
   carregarProdutos(produtosFiltrados);
 }
 
@@ -164,13 +166,14 @@ function filtroCategoria() {
 function ordenarPorPreço() {
   const ordem = document.getElementById('ordenarPor').value;
   let sortedProducts = [...allProducts];
-  
+
   if (ordem === 'preco-asc') {
-    sortedProducts.sort((a, b) => a.price - b.price);
+    sortedProducts.sort((a, b) => parseFloat(a.price) - parseFloat(b.price));
   } else if (ordem === 'preco-desc') {
-    sortedProducts.sort((a, b) => b.price - a.price);
+    sortedProducts.sort((a, b) => parseFloat(b.price) - parseFloat(a.price));
   }
-  
+
+  console.log('Produtos ordenados:', sortedProducts); // Log para verificar
   carregarProdutos(sortedProducts);
 }
 
@@ -211,7 +214,7 @@ function processaPagamento() {
   });
 }
 
-// Adiciona event listeners para filtros e pesquisa
+// Event listeners para filtros e pesquisa
 document.getElementById('filtrarPor')?.addEventListener('change', filtroCategoria);
 document.getElementById('ordenarPor')?.addEventListener('change', ordenarPorPreço);
 document.getElementById('pesquisar')?.addEventListener('input', pesquisarProdutos);

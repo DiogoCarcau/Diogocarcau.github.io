@@ -7,14 +7,14 @@
 body {
   font-family: Arial, sans-serif;
   padding-top: 80px;
-  background-color: #ffffff;
+  background-image: url(cinza.avif);
 }
 
 header {
   position: fixed;
   top: 0;
   width: 100%;
-  background-color: #980fe8;
+  background-color: #878688;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -23,7 +23,7 @@ header {
 }
 
 header a {
-  color: #ffffff;
+  color: #878688;
   text-decoration: none;
 }
 
@@ -32,7 +32,7 @@ h2 {
 }
 
 header nav a {
-  color: #07eeee;
+  color: #000000;
   margin: 0 10px;
   font-weight: bold;
   transition: color 0.4s;
@@ -61,7 +61,7 @@ header nav a {
 
 .image-item:hover {
   transform: translateY(-5px);
-  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
 .image-item img {
@@ -134,7 +134,7 @@ header nav a {
 
 .produto-card button {
   margin-top: 10px;
-  background-color: #980fe8;
+  background-color: #878688;
   color: white;
   padding: 10px 15px;
   border: none;
@@ -144,18 +144,18 @@ header nav a {
 }
 
 .produto-card button:hover {
-  background-color: #14bfc5;
+  background-color: #01641d;
 }
 
 
 .preco {
-  color: #13549f;
+  color: #03080e;
   font-weight: bold;
   font-size: 18px;
 }
 
 .pCont button {
-  background-color: #980fe8;
+  background-color: #878688;
   color: rgb(255, 247, 252);
   border: none;
   padding: 10px 15px;
@@ -176,7 +176,7 @@ footer {
 }
 
 .descricao {
-  background-color: #69727b;
+  background-color: #b6b7b9;
   padding: 15px;
   border-radius: 5px;
   margin-bottom: 15px;
@@ -190,18 +190,17 @@ footer {
   font-size: 18px;
   font-weight: bold;
   margin-bottom: 10px;
-  color: #530969;
+  color: #000000;
 }
 
 .avaliacoes {
   font-size: 14px;
-  color: #530969;
+  color: #000000;
   margin-bottom: 15px;
 }
 
 .adicionar-cesto {
   background-color: #d1e7dd;
-  color: #0f5132;
   padding: 10px 20px;
   border: none;
   border-radius: 5px;
