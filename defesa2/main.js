@@ -274,11 +274,10 @@ function removerTodosCarinho(elementoCesto) {
   localStorage.setItem('produtos-selecionados', JSON.stringify(selectedProducts));
   
   elementoCesto.remove();
-  updateDinheiro(elementoCesto);
+  updateDinheiro(selectedProducts);
 }
 
 
-// Event listeners para filtros e pesquisa
 document.getElementById('filtrarPor')?.addEventListener('change', filtroCategoria);
 document.getElementById('pesquisar')?.addEventListener('input', pesquisarProdutos);
 document.getElementById('btn-sem-descricao').addEventListener('click', () => {
