@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diogo EuroShop</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Diogo EuroShop</h1>
+        <nav>
+            <ul>
+                <li><a href="#produtos">Produtos</a></li>
+                <li><a href="#carrinho">Carrinho</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="filtros">
+            <div class="filtro-produtos">
+                <label for="filtrarPor">Filtrar por:</label>
+                <select id="filtrarPor">
+                    <option value="">Todas as categorias</option>
+                    <option value="T-shirts">T-shirts</option>
+                    <option value="Canecas">Canecas</option>
+                    <option value="Meias">Meias</option>
+                </select>
+
+
+                <label for="pesquisar">Pesquisar:</label>
+                <input type="text" id="pesquisar" placeholder="Nome do produto">
+
+                <button id="btn-sem-descricao">Menos info</button>
+
+
+                <label for="ordenarPorRating">Ordenar por Rating:</label>
+                <select id="ordenarPorRating">
+                    <option value="">Sem ordenação</option>
+                    <option value="rating-ascendente">Rating (Crescente)</option>
+                    <option value="rating-descendente">Rating (Decrescente)</option>
+                </select>
+                
+
+                <button id="btn-remover-todos">Remover Todos do Cesto</button>
+
+            </div>
+        </section>
+
+        <h2>Selecione os seus Produtos</h2>
+        <section class="produtos-container">
+            <section class ="produtos" id="produtos"></section>
+            <section id="carrinho">
+                <h3>Produtos Selecionados</h3>
+                <h4 id="custo-total">Custo total: 0.00 €</h4>
+                <div class="produtos-cesto"></div>
+                <section class="checkout">
+                    <label>
+                        És estudante do DEISI? 
+                        <input type="checkbox" id="estudante-checkbox">
+                    </label>
+                    <label>
+                        Cupão de desconto:
+                        <input type="text" id="desconto-cupao">
+                    </label>
+                    <button onclick="processaPagamento()">Comprar</button>
+                    <p id="precofinal"></p>
+                    <p id="referencia"></p>
+                </section>
+            </section>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2024 Diogo EuroShop</p>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>
